@@ -18,19 +18,19 @@ public interface AdminSercviceAmp {
 	 * Este metodo guardara en la base de datos todos los cursos que se pasen a traves del arrayList
 	 * @param cursos , cada HashMap tendra dentro la informacion relativa a cada curso
 	 */
-	public void saveCursos(ArrayList<HashMap<String, Object>> cursos);
+	public void saveCursos(ArrayList<HashMap<String, Object>> cursos) throws BusinessException;
 	
 	/**
 	 * Este metodo retornara los distintos tipos de vehiculos que ahi
 	 * @return cada elemento del array describira un tipo de vehiculo, claves (ID,NOMBRE)
 	 */
-	public ArrayList<HashMap<String, Object>> listarTiposVehiculos();
+	public ArrayList<HashMap<String, Object>> listarTiposVehiculos() throws BusinessException;
 	
 	/**
 	 * retornara los distintos cursos
 	 * @return cada elemento del array sera un curso claves hashmap (id,nombre,descripcion,totalhoras)
 	 */
-	public ArrayList<HashMap<String, Object>> listarCursos();
+	public ArrayList<HashMap<String, Object>> listarCursos() throws BusinessException;
 	
 	/**
 	 * Este metodo modificara el curso que sea correspondiente al id_curso
@@ -47,24 +47,24 @@ public interface AdminSercviceAmp {
 	 * Eliminara el curso correspondiente al id dado
 	 * @param id_curso
 	 */
-	public void eliminarCurso(long id_curso);
+	public void eliminarCurso(long id_curso) throws BusinessException;
 	/**
 	 * retornara un array en el cual cada elemento sera una asistencia , cada elemento es un curso , en el cual dentro ahi un map con las asistencias a cada uno
 	 * @return array en el cual cada elemento sera una asistencia , claves hashmap (id , asistencias (nombre,finicio,ffinal,pasistencia,status,mecanico_id,curso_id))
 	 */
-	public ArrayList<HashMap<String, Object>> listarAsistencias();
+	public ArrayList<HashMap<String, Object>> listarAsistencias() throws BusinessException, SQLException;
 	
 	/**
 	 * Guardara las asistencias que esten en el array
 	 * @param asistencias claves hashmap (nombre,finicio,ffinal,pasistencia,status,mecanico_id,curso_id)
 	 */
-	public void saveAsistencias(ArrayList<HashMap<String, Object>> asistencias);
+	public void saveAsistencias(ArrayList<HashMap<String, Object>> asistencias) throws BusinessException;
 	
 	/**
 	 * Modificara una asistencia
 	 * @param asistencia claves hashmap nombre,finicio,ffinal,pasistencia,status,mecanico_id,curso_id)
 	 */
-	public void modificarAsistencia(HashMap<String, Object> asistencia);
+	public void modificarAsistencia(HashMap<String, Object> asistencia) throws BusinessException;
 	
 	/**
 	 * eliminara la asistencia dada por los parametros
@@ -72,24 +72,24 @@ public interface AdminSercviceAmp {
 	 * @param mecanico_id
 	 * @param finicio
 	 */
-	public void eliminarAsistencia(long curso_id, long mecanico_id, Date finicio);
+	public void eliminarAsistencia(long curso_id, long mecanico_id, Date finicio) throws BusinessException;
 	
 	/**
 	 * Buscara que mecanicos han cumplido con los requisitos para obtener los certificados correspondientes y los introducira en la base de datos
 	 */
-	public void generarCertificados();
+	public void generarCertificados() throws BusinessException;
 
 	/** LISTADO 1
 	 * Listara la formacion de la que dispone el mecanico dado por el id
 	 * @param mecanico_id
 	 * @return  HashMap<String, Object> 
 	 */
-	public HashMap<String, Object> listarFormacion(long mecanico_id);
+	public HashMap<String, Object> listarFormacion(long mecanico_id) throws BusinessException;
 	
 	/** LISTADO 2
 	 * Lstara por tipos , las horas que cada mecanico ha trabajado en ese vehiculo
 	 * @return  HashMap<String, Object>
 	 */
-	public ArrayList<HashMap<String, Object>> listarFormacionPorTipos();
+	public ArrayList<HashMap<String, Object>> listarFormacionPorTipos() throws BusinessException;
 
 }

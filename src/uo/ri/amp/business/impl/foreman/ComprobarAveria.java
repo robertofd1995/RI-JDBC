@@ -17,7 +17,7 @@ public class ComprobarAveria {
 		this.idAveria=idAveria;
 	}
 
-	public boolean execute() {
+	public boolean execute() throws BusinessException {
 		Connection c;
 		boolean existe=false;
 		try {

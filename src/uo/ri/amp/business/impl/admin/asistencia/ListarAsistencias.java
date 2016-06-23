@@ -15,7 +15,7 @@ public class ListarAsistencias {
 	
 
 
-	public ArrayList<HashMap<String, Object>> execute() {
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException, SQLException {
 		
 		ArrayList<HashMap<String, Object>> asistencias=null;
 		

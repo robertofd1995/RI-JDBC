@@ -24,18 +24,18 @@ import uo.ri.common.BusinessException;
 public class AdminServiceAmpImpl implements AdminSercviceAmp{
 
 	@Override
-	public void saveCursos(ArrayList<HashMap<String, Object>> cursos) {
+	public void saveCursos(ArrayList<HashMap<String, Object>> cursos) throws BusinessException {
 		new AddCurso(cursos).execute();
 		
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarTiposVehiculos() {
+	public ArrayList<HashMap<String, Object>> listarTiposVehiculos() throws BusinessException {
 		return new ListarTiposVehiculos().execute();
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarCursos() {
+	public ArrayList<HashMap<String, Object>> listarCursos() throws BusinessException {
 		return new ListarCursos().execute();
 	}
 
@@ -46,49 +46,49 @@ public class AdminServiceAmpImpl implements AdminSercviceAmp{
 	}
 
 	@Override
-	public void eliminarCurso(long id_curso) {
+	public void eliminarCurso(long id_curso) throws BusinessException {
 		new DeleteCurso(id_curso).execute();
 		
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarAsistencias() {
+	public ArrayList<HashMap<String, Object>> listarAsistencias() throws BusinessException, SQLException {
 		
 		return new ListarAsistencias().execute();
 	}
 
 
 	@Override
-	public void saveAsistencias(ArrayList<HashMap<String, Object>> asistencias) {
+	public void saveAsistencias(ArrayList<HashMap<String, Object>> asistencias) throws BusinessException {
 		new InsertarAsistencias(asistencias).execute();
 		
 	}
 
 	@Override
-	public void eliminarAsistencia(long curso_id, long mecanico_id,Date finicio) {
+	public void eliminarAsistencia(long curso_id, long mecanico_id,Date finicio) throws BusinessException {
 		new EliminarAsistencia(curso_id,mecanico_id,finicio).execute();
 		
 	}
 
 	@Override
-	public void modificarAsistencia(HashMap<String, Object> asistencia) {
+	public void modificarAsistencia(HashMap<String, Object> asistencia) throws BusinessException {
 		new ModificarAsistencia(asistencia).execute();
 		
 	}
 
 	@Override
-	public void generarCertificados() {
+	public void generarCertificados() throws BusinessException {
 		new GenerarCertificados().execute();
 	}
 
 	@Override
-	public HashMap<String, Object> listarFormacion(long mecanico_id) {
+	public HashMap<String, Object> listarFormacion(long mecanico_id) throws BusinessException {
 		return new ListarFormacion(mecanico_id).execute();
 		
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarFormacionPorTipos() {
+	public ArrayList<HashMap<String, Object>> listarFormacionPorTipos() throws BusinessException {
 		return new ListarFormacionPorTipos().execute();
 		
 	}

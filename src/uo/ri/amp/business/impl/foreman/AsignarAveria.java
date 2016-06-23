@@ -19,7 +19,7 @@ public class AsignarAveria {
 	}
 
 
-	public void execute() {
+	public void execute() throws BusinessException {
 		Connection c=null;
 		boolean existe=false;
 		try {

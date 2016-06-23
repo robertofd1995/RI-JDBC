@@ -19,7 +19,7 @@ public class ModificarAsistencia {
 	}
 
 
-	public void execute() {
+	public void execute() throws BusinessException {
 		GatewayAsistencias gateway = APersistenceFactory.getAsistenciaGateway();
 		Connection c=null;
 		try {

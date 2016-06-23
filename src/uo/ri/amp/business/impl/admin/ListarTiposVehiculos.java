@@ -9,10 +9,11 @@ import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.persistence.GatewayTipoVehiculo;
+import uo.ri.common.BusinessException;
 
 public class ListarTiposVehiculos {
 	
-	public ArrayList<HashMap<String, Object>> execute(){
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		GatewayTipoVehiculo gateway = APersistenceFactory.getTipoVehiculoGateway();
 		Connection c;

@@ -17,7 +17,7 @@ public class DeleteAveria {
 		this.id=id;
 	}
 
-	public void execute() {
+	public void execute() throws BusinessException {
 		
 		GatewayAverias gateway = APersistenceFactory.getAveriasGateway();
 		

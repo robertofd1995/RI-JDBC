@@ -133,7 +133,7 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarAsistenciasPorCurso() throws BusinessException {
+	public ArrayList<HashMap<String, Object>> listarAsistenciasPorCurso() throws BusinessException, SQLException {
 		
 		
 		GatewayCursos gateway = APersistenceFactory.getCursosGateway();

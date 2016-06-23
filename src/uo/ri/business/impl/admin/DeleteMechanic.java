@@ -1,5 +1,6 @@
 package uo.ri.business.impl.admin;
 
+import uo.ri.common.BusinessException;
 import uo.ri.conf.PersistenceFactory;
 
 public class DeleteMechanic {
@@ -10,7 +11,7 @@ public class DeleteMechanic {
 		this.idMecanico=idMecanico;
 	}
 	
-	public void execute(){
+	public void execute() throws BusinessException {
 		PersistenceFactory.getMecanicosGateway().delete(idMecanico);
 	}
 

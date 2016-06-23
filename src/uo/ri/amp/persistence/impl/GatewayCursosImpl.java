@@ -76,7 +76,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 					
 					pst=c.prepareStatement(SQL_INSERT_FRAGMENTO);
 					pst.setDouble(1, (Double) fragmento.get("porcentaje"));
-					pst.setLong(2, (Long)fragmento.get("id_tipo"));  //comprobar primero que el id_tipo es valido , ¿pedir nombre o listar los id_tipo?
+					pst.setLong(2, (Long)fragmento.get("id_tipo"));  //comprobar primero que el id_tipo es valido , ï¿½pedir nombre o listar los id_tipo?
 					pst.setLong(3, id_curso);
 					
 					pst.executeUpdate();
@@ -268,12 +268,10 @@ public class GatewayCursosImpl implements GatewayCursos{
 	
 
 	@Override
-	public void setConnection(Connection conection) {
-		try {
+	public void setConnection(Connection conection) throws SQLException, BusinessException {
+
 			c=Jdbc.getConnection();
-		} catch (SQLException e) {
-			Console.println("error al obtener conexion");
-		}
+
 	}
 
 	

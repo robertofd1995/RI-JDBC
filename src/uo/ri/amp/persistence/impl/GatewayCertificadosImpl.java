@@ -24,7 +24,7 @@ public class GatewayCertificadosImpl implements GatewayCertificados{
 	private final String SQL_LISTAR_EXPERTOS_CERTIFICADO=Conf.get("SQL_LISTAR_EXPERTOS_CERTIFICADO");
 	
 	@Override
-	public void setConnection(Connection conection) {
+	public void setConnection(Connection conection) throws BusinessException {
 		try {
 			c=Jdbc.getConnection();
 		} catch (SQLException e) {

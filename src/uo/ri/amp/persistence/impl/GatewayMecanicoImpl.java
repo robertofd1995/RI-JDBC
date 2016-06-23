@@ -41,7 +41,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	
 	
 	@Override
-	public void save(List<Map<String, String>> mecanicos){
+	public void save(List<Map<String, String>> mecanicos) throws BusinessException {
 		
 		try {
 			c = Jdbc.getConnection();
@@ -70,7 +70,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	}
 
 	@Override
-	public void delete(Long id) {
+	public void delete(Long id) throws BusinessException {
 		Connection c = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;
@@ -93,7 +93,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	}
 
 	@Override
-	public List<Map<String, Object>> list() {
+	public List<Map<String, Object>> list() throws BusinessException {
 		Connection c = null;
 		PreparedStatement pst = null;
 		ResultSet rs = null;

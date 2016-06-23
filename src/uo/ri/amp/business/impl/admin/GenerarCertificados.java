@@ -10,7 +10,7 @@ import uo.ri.common.BusinessException;
 
 public class GenerarCertificados {
 
-	public void execute() {
+	public void execute() throws BusinessException {
 		GatewayCertificados gateway = APersistenceFactory.getCertificadosGateway();
 		
 		Connection c;

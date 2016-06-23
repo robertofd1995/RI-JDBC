@@ -29,7 +29,7 @@ public class ForemanServiceAmpImpl  implements ForemanServiceAmp{
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listar() {
+	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
 		
 		return new ListarAverias().execute();
 	}
@@ -46,7 +46,7 @@ public class ForemanServiceAmpImpl  implements ForemanServiceAmp{
 	}
 
 	@Override
-	public void deleteAveria(long id) {
+	public void deleteAveria(long id) throws BusinessException {
 		new DeleteAveria(id).execute();
 		
 	}
@@ -58,19 +58,19 @@ public class ForemanServiceAmpImpl  implements ForemanServiceAmp{
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listarExpertos(long idAveria) {
+	public ArrayList<HashMap<String, Object>> listarExpertos(long idAveria) throws BusinessException {
 
 		return new ListarMecanicosExpertos(idAveria).execute();
 	}
 
 	@Override
-	public boolean comprobarAveria(long idAveria) {
+	public boolean comprobarAveria(long idAveria) throws BusinessException {
 		
 		return new ComprobarAveria(idAveria).execute();
 	}
 
 	@Override
-	public void asignarAveria(long idAveria, long mecanico_id) {
+	public void asignarAveria(long idAveria, long mecanico_id) throws BusinessException {
 		new AsignarAveria(idAveria,mecanico_id).execute();
 		
 	}

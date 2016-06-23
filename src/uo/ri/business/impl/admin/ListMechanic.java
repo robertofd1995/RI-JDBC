@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import uo.ri.common.BusinessException;
 import uo.ri.conf.PersistenceFactory;
 
 public class ListMechanic {
@@ -11,7 +12,7 @@ public class ListMechanic {
 	
 	private List<Map<String,Object>> result=new ArrayList<Map<String,Object>>();
 	
-	public void execute(){
+	public void execute() throws BusinessException {
 		setResult(PersistenceFactory.getMecanicosGateway().list());
 	}
 

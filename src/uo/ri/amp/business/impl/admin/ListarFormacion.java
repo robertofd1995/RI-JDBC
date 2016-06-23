@@ -18,7 +18,7 @@ public class ListarFormacion {
 		this.mecanico_id=mecanico_id;
 	}
 
-	public HashMap<String, Object> execute() {
+	public HashMap<String, Object> execute() throws BusinessException {
 		GatewayMecanico gateway = APersistenceFactory.getMecanicoGateway();
 		HashMap<String, Object> formacion = null;
 		

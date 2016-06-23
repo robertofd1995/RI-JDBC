@@ -38,7 +38,7 @@ public class UpdateAveria {
 		this.importe=importe;
 	}
 
-	public void execute() {
+	public void execute() throws BusinessException {
 		GatewayAverias gateway=APersistenceFactory.getAveriasGateway();
 		
 		Connection c;

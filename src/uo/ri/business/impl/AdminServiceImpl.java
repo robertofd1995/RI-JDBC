@@ -24,13 +24,13 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void deleteMechanic(long idMecanico) {
+	public void deleteMechanic(long idMecanico) throws BusinessException {
 		new DeleteMechanic(idMecanico).execute();
 		
 	}
 
 	@Override
-	public List<Map<String,Object>> listMechanic() {
+	public List<Map<String,Object>> listMechanic() throws BusinessException {
 		ListMechanic lm= new ListMechanic();
 		lm.execute();
 		return lm.getResult();
@@ -39,7 +39,7 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void updateMechanic(long id, String nombre, String apellidos) {
+	public void updateMechanic(long id, String nombre, String apellidos) throws BusinessException {
 		new UpdateMechanic(id, nombre, apellidos).execute();
 		
 	}

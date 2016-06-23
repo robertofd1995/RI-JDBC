@@ -60,7 +60,7 @@ public class GatewayVehiculoImpl implements GatewayVehiculo{
 
 
 	@Override
-	public void setConnection(Connection conection) {
+	public void setConnection(Connection conection) throws BusinessException {
 		try {
 			c=Jdbc.getConnection();
 		} catch (SQLException e) {

@@ -19,7 +19,7 @@ public class AddCurso{
 		this.cursos=cursos;
 	}
 	
-	public void execute(){
+	public void execute() throws BusinessException {
 		
 		GatewayCursos gateway = APersistenceFactory.getCursosGateway();
 		Connection c;

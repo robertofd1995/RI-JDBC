@@ -2,6 +2,7 @@ package uo.ri.amp.persistence;
 
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,7 +16,7 @@ public interface GatewayAsistencias {
 			ArrayList<HashMap<String, Object>> asistencias) throws BusinessException;
 
 	
-	ArrayList<HashMap<String, Object>> listarAsistenciasPorCurso() throws BusinessException;
+	ArrayList<HashMap<String, Object>> listarAsistenciasPorCurso() throws BusinessException, SQLException;
 
 	public void modficarAsistencia(HashMap<String, Object> asistencia) throws BusinessException;
 

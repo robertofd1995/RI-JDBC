@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import alb.util.jdbc.Jdbc;
+import uo.ri.common.BusinessException;
 
 public class UpdateMechanic {
 	
@@ -23,7 +24,7 @@ public class UpdateMechanic {
 		this.apellidos=apellidos;
 	}
 	
-	public void execute(){
+	public void execute() throws BusinessException {
 		// Procesar
 				Connection c = null;
 				PreparedStatement pst = null;

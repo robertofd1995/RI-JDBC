@@ -11,6 +11,7 @@ import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.Conf;
 import uo.ri.amp.persistence.GatewayTipoVehiculo;
+import uo.ri.common.BusinessException;
 
 public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 
@@ -23,7 +24,7 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listar() {
+	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
 		
 		try {
 			c = Jdbc.getConnection();

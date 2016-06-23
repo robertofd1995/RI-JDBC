@@ -9,10 +9,11 @@ import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.persistence.GatewayAverias;
+import uo.ri.common.BusinessException;
 
 public class ListarAverias {
 
-	public ArrayList<HashMap<String, Object>> execute() {
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		GatewayAverias gateway=APersistenceFactory.getAveriasGateway();
 		Connection c;

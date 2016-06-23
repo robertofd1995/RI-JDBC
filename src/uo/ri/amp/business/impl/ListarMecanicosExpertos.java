@@ -19,7 +19,7 @@ public class ListarMecanicosExpertos {
 		this.idAveria=idAveria;
 	}
 
-	public ArrayList<HashMap<String, Object>> execute() {
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		Connection c;
 		ArrayList<HashMap<String, Object>> expertos=null;
 		

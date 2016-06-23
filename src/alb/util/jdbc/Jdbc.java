@@ -1,5 +1,7 @@
 package alb.util.jdbc;
 
+import uo.ri.common.BusinessException;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -30,8 +32,14 @@ public class Jdbc {
 		}
 	}
 	
-	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(URL, USER, PASS);
+	public static Connection getConnection() throws SQLException, BusinessException {
+
+		try {
+			return DriverManager.getConnection(URL, USER, PASS);
+		}catch (Exception e){
+			throw new BusinessException("error al establecer conexion");
+		}
+
 	}
 
 	public static void close(ResultSet rs, Statement st, Connection c) {
@@ -57,7 +65,7 @@ public class Jdbc {
 		if (c != null) try { c.close(); } catch(SQLException e) {};
 	}
 
-	public static Connection createThreadConnection() throws SQLException {
+	public static Connection createThreadConnection() throws SQLException, BusinessException {
 		Connection con = getConnection();
 		con.setAutoCommit( false );
 		threadConnection.set(con);

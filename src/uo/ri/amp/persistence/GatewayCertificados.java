@@ -8,7 +8,7 @@ import uo.ri.common.BusinessException;
 
 public interface GatewayCertificados {
 	
-	public void setConnection(Connection conection);
+	public void setConnection(Connection conection) throws BusinessException;
 
 	public void generarCertificados() throws BusinessException;
 

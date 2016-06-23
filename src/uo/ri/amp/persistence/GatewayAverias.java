@@ -11,7 +11,7 @@ import uo.ri.common.BusinessException;
 
 public interface GatewayAverias {
 	
-	public void setConnection(Connection conection);
+	public void setConnection(Connection conection) throws BusinessException;
 
 	public void save(List<Map<String, Object>> averias) throws BusinessException;
 

@@ -13,7 +13,7 @@ import uo.ri.common.BusinessException;
 
 public class ListarFormacionPorTipos {
 
-	public ArrayList<HashMap<String, Object>> execute() {
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		 ArrayList<HashMap<String, Object>> tipos=null;
 		
