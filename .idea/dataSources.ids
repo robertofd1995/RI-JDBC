@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="HSQLDB (Local) - jdbc:hsqldb:hsql://localhost" uuid="b91d2493-e6f4-4d21-b0fb-fd4384c61e50">
+  <data-source name="HSQLDB (Local) - jdbc:hsqldb:hsql://localhost" uuid="d65dad9e-ad74-4799-8629-9ebc6b2d0e1c">
     <database-info product="HSQL Database Engine" version="2.3.2" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.2">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>

@@ -47,7 +47,7 @@ public interface AdminSercviceAmp {
 	 * Eliminara el curso correspondiente al id dado
 	 * @param id_curso
 	 */
-	public void eliminarCurso(long id_curso) throws BusinessException;
+	public void eliminarCurso(long id_curso) throws BusinessException, SQLException;
 	/**
 	 * retornara un array en el cual cada elemento sera una asistencia , cada elemento es un curso , en el cual dentro ahi un map con las asistencias a cada uno
 	 * @return array en el cual cada elemento sera una asistencia , claves hashmap (id , asistencias (nombre,finicio,ffinal,pasistencia,status,mecanico_id,curso_id))

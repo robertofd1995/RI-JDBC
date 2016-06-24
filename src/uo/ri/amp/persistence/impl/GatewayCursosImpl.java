@@ -178,37 +178,19 @@ public class GatewayCursosImpl implements GatewayCursos{
 
 	@Override
 	public void delete(long id_curso) throws BusinessException {
-		
-		GatewayFragmentos gatewayFragmentos=APersistenceFactory.getFragmentosGateway();
-		GatewayAsistencias gatewayAsistencia=APersistenceFactory.getAsistenciaGateway();
-		
-		gatewayFragmentos.setConnection(c);
-		gatewayAsistencia.setConnection(c);
-		
-			if (existeCurso(id_curso)==false) {
-				throw new BusinessException("No existe el curso que esta intentando eliminar");
-			}
-				
-			
-			if(gatewayAsistencia.comprobarAsistenciasCurso(id_curso)){
-					throw new BusinessException("El curso que esta intentando borrar tiene asistencias, no puede ser borrado");
-			}
-				
+
 		try {
 			c.setAutoCommit(false);
 			pst=c.prepareStatement(SQL_DELETE_CURSO);
 			pst.setLong(1, id_curso);
-			try {
-				gatewayFragmentos.borrarFragmentosAsociadosACurso(id_curso);
-			} catch (BusinessException e) {
-				throw e;
-			}
 			pst.executeUpdate();
 			c.commit();
 			
-			
 		} catch (SQLException e) {
 			throw new BusinessException("Error al eliminar curso");
+		}
+		finally{
+			Jdbc.close(pst);
 		}
 		
 		

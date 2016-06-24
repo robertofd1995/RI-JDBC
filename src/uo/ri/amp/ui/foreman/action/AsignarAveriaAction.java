@@ -26,7 +26,7 @@ public class AsignarAveriaAction implements Action{
 		
 		StringBuilder str=new StringBuilder();
 		for (HashMap<String, Object> mecanico : mecanicosExpertos) {
-			str.append("\t\nId : " + (Long)mecanico.get("id") + " nombre :"+mecanico.get("nombre") );
+			str.append("\t\nId : " + mecanico.get("id") + " nombre :"+mecanico.get("nombre") );
 		}
 		
 		Console.println(str.toString());

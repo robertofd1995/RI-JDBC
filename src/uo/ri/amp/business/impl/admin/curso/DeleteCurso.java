@@ -6,7 +6,9 @@ import java.sql.SQLException;
 import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
+import uo.ri.amp.persistence.GatewayAsistencias;
 import uo.ri.amp.persistence.GatewayCursos;
+import uo.ri.amp.persistence.GatewayFragmentos;
 import uo.ri.common.BusinessException;
 
 public class DeleteCurso {
@@ -19,21 +21,33 @@ public class DeleteCurso {
 		
 	}
 
-	public void execute() throws BusinessException {
-		GatewayCursos gateway = APersistenceFactory.getCursosGateway();
-		Connection c;
+	public void execute() throws BusinessException, SQLException {
+
+		GatewayCursos gatewayCursos = APersistenceFactory.getCursosGateway();
+		GatewayAsistencias gatewayAsistencia= APersistenceFactory.getAsistenciaGateway();
+		GatewayFragmentos gatewayFragmentos=APersistenceFactory.getFragmentosGateway();
+
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
-			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+			c.setAutoCommit(false);
+			gatewayCursos.setConnection(c);
+			gatewayAsistencia.setConnection(c);
+			gatewayFragmentos.setConnection(c);
+
+			if (!gatewayCursos.existeCurso(id_curso)) {
+				throw new BusinessException("No existe el curso que esta intentando eliminar");
+			}
+
+			if(gatewayAsistencia.comprobarAsistenciasCurso(id_curso)){
+				throw new BusinessException("El curso que esta intentando borrar tiene asistencias, no puede ser borrado");
+			}
+
+			gatewayFragmentos.borrarFragmentosAsociadosACurso(id_curso);
+			gatewayCursos.delete(id_curso);
 		}
-		try {
-			gateway.delete(id_curso);
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+		 finally {
+			Jdbc.close(c);
 		}
-		
 	}
 
 }

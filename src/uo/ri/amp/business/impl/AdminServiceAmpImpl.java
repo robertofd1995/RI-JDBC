@@ -46,7 +46,7 @@ public class AdminServiceAmpImpl implements AdminSercviceAmp{
 	}
 
 	@Override
-	public void eliminarCurso(long id_curso) throws BusinessException {
+	public void eliminarCurso(long id_curso) throws BusinessException, SQLException {
 		new DeleteCurso(id_curso).execute();
 		
 	}

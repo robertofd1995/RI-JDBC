@@ -87,11 +87,11 @@ public class FacturarReparaciones {
 			return (new Factura(numeroFactura, fechaFactura, totalFactura, iva, importe));
 		}
 		catch (SQLException e) {
-			try { connection.rollback(); } catch (SQLException ex) {};
+			try { connection.rollback(); } catch (SQLException ex) {}
 			throw new RuntimeException(e);
 		}
 		catch (BusinessException e) {
-			try { connection.rollback(); } catch (SQLException ex) {};
+			try { connection.rollback(); } catch (SQLException ex) {}
 			throw e;
 		}
 		finally {
@@ -291,9 +291,7 @@ public class FacturarReparaciones {
 			}
 			
 			return rs.getDouble(1);
-			
-		} catch (BusinessException e) {
-			throw e;
+
 		}
 		finally {
 			Jdbc.close(rs, pst);

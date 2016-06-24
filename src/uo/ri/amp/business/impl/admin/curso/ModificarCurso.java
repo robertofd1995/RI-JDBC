@@ -33,10 +33,11 @@ public class ModificarCurso {
 		} catch (SQLException e) {
 			Console.println("Error al establecer conexion");
 		}
-		try {
+
+		if(gateway.existeCurso(id_curso)) {
 			gateway.modificar(id_curso,nombre,descripcion,totalHoras);
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+		}else{
+			throw new BusinessException("El curso que esta intentando modificar no existe");
 		}
 		
 	}

@@ -1,6 +1,7 @@
 package uo.ri.amp.business.impl.admin.asistencia;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -29,13 +30,16 @@ public class ModificarAsistencia {
 			Console.println("Error al establecer conexion");
 		}
 		
-		
 		try {
-			gateway.modficarAsistencia(asistencia);
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+
+			if (gateway.comprobarAsistencia((Long) asistencia.get("curso_id"),
+					(Long) asistencia.get("mecanico_id"), (Date) asistencia.get("finicio")) ) {
+						gateway.modficarAsistencia(asistencia);
+			} else {
+				throw new BusinessException("La asistencia que esta intentando modificar no existe ," +
+						" asegurese de haber introducido la fecha original");
+			}
 		}
-		
 		finally {
 			Jdbc.close(c);
 		}

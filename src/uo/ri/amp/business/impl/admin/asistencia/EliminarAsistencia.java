@@ -36,8 +36,6 @@ public class EliminarAsistencia {
 		
 		try {
 			gateway.eliminarAsistencia(curso_id, mecanico_id,finicio);
-		} catch (BusinessException e) {
-			Console.println(e.toString());
 		}
 		
 		finally {

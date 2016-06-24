@@ -20,12 +20,13 @@ public class ModificarAsistenciaAction implements Action {
 		
 		Date finicio = null,ffinal = null;
 		HashMap<String, Object> asistencia=new HashMap<String, Object>();
-		
-		Long mecanico_id = Console.readLong("Id del mecanico");
+
 		Long curso_id = Console.readLong("Id del curso");
+		Long mecanico_id = Console.readLong("Id del mecanico");
+
 		
 		try {
-			finicio=new Date( DateUtil.fromString( Console.readString("fecha de inicio (DD/MM/YYYY) ")).getTime() );
+			finicio=new Date( DateUtil.fromString( Console.readString("fecha de inicio (DD/MM/YYYY) (Atencion la fecha inicial no se puede modificar ,debe ser la original)")).getTime() );
 			ffinal=new Date( DateUtil.fromString( Console.readString("fecha de final (DD/MM/YYYY) ")).getTime() );
 			
 		} catch (RuntimeException e) {
@@ -34,7 +35,7 @@ public class ModificarAsistenciaAction implements Action {
 		}
 		
 		double pasistencia = Console.readDouble("Porcentaje de asistencias a clase");
-		boolean apto=(Console.readString("¿Es apto? (s/n")).contains("s")?true:false;
+		boolean apto=(Console.readString("ï¿½Es apto? (s/n")).contains("s")?true:false;
 		
 		
 		asistencia.put("mecanico_id", mecanico_id);

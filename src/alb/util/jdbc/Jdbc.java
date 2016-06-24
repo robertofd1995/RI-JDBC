@@ -54,15 +54,15 @@ public class Jdbc {
 	}
 
 	protected static void close(ResultSet rs) {
-		if (rs != null) try { rs.close(); } catch(SQLException e) {};
+		if (rs != null) try { rs.close(); } catch(SQLException e) {}
 	}
 
 	public static void close(Statement st) {
-		if (st != null ) try { st.close(); } catch(SQLException e) {};
+		if (st != null ) try { st.close(); } catch(SQLException e) {}
 	}
 
 	public static void close(Connection c) {
-		if (c != null) try { c.close(); } catch(SQLException e) {};
+		if (c != null) try { c.close(); } catch(SQLException e) {}
 	}
 
 	public static Connection createThreadConnection() throws SQLException, BusinessException {
