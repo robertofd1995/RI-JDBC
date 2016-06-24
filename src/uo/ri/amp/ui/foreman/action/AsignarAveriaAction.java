@@ -6,6 +6,7 @@ import java.util.HashMap;
 import alb.util.console.Console;
 import alb.util.menu.Action;
 import uo.ri.amp.conf.AServicesFactory;
+import uo.ri.common.BusinessException;
 
 public class AsignarAveriaAction implements Action{
 
@@ -15,12 +16,16 @@ public class AsignarAveriaAction implements Action{
 		
 		
 		
-		if(AServicesFactory.getForemanService().comprobarAveria(idAveria)==false)
-			Console.println("El id de la averia que esta introducciendo no existe");
+		if(!AServicesFactory.getForemanService().comprobarAveria(idAveria))
+			throw new BusinessException("El id de la averia que esta introducciendo no existe");
 		
 		ArrayList<HashMap<String, Object>> mecanicosExpertos=
 				AServicesFactory.getForemanService().listarExpertos(idAveria);
-		
+
+
+		if (mecanicosExpertos.isEmpty()) {
+			throw new BusinessException("No hay mecanicos expertos disponibles ");
+		}
 		Console.println("Mecanicos disponibles");
 		
 		
@@ -32,7 +37,10 @@ public class AsignarAveriaAction implements Action{
 		Console.println(str.toString());
 		
 		long mecanico_id=Console.readLong("Introduzca el id del mecanico al que le quiere asignar la averia");
-		
+
+		if ( !mecanicosExpertos.stream().allMatch(m -> m.get("id").equals(mecanico_id)) )
+			throw new BusinessException("El id introducido no pertenece a uno de los dados");
+
 		AServicesFactory.getForemanService().asignarAveria(idAveria,mecanico_id);
 		
 		Console.println("Operacion de asignacion finalizada");

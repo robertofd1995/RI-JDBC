@@ -7,6 +7,7 @@ import uo.ri.amp.ui.foreman.action.EliminarAveriaAction;
 import uo.ri.amp.ui.foreman.action.ListarAveriasAction;
 import uo.ri.amp.ui.foreman.action.ModificarAveriaAction;
 import uo.ri.amp.ui.foreman.action.RegistrarAveriaAction;
+import uo.ri.ui.admin.action.ListMechanicsAction;
 
 public class RecepcionMenu extends BaseMenu {
 
@@ -21,7 +22,7 @@ public class RecepcionMenu extends BaseMenu {
 			{"Listar averías", 			ListarAveriasAction.class }, 
 			//{"Ver una avería", 			NotYetImplementedAction.class },
 			{"", null},
-			{"Listar mecánicos", 		NotYetImplementedAction.class }, 
+			{"Listar mecánicos", 		ListMechanicsAction.class },
 			{"Asignar una avería",  	AsignarAveriaAction.class },
 		};
 	}

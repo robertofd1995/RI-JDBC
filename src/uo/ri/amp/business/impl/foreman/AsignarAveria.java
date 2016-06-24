@@ -32,7 +32,6 @@ public class AsignarAveria {
 				existe=gateway.comprobarAveria(idAveria);
 				if (!existe) {
 					Console.print("ERROR :La averias que esta asignar no existe");
-					//break;
 				}
 			} catch (BusinessException e1) {
 				Console.print("La averias que esta asignar no existe");
