@@ -16,12 +16,11 @@ public class ListarAverias {
 	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		GatewayAverias gateway=APersistenceFactory.getAveriasGateway();
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+		} finally {
+			Jdbc.close(c);
 		}
 		return gateway.listar();
 	}

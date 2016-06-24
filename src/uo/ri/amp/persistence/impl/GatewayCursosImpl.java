@@ -92,7 +92,9 @@ public class GatewayCursosImpl implements GatewayCursos{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}finally {
+			Jdbc.close(rs,pst);
+		}
 	}
 	
 	@Override
@@ -111,6 +113,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 			pst.executeUpdate();
 		} catch (SQLException e) {
 			Console.println("Error durante la operacion (modificar curso)");
+		}finally {
+			Jdbc.close(pst);
 		}
 		
 		
@@ -139,6 +143,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 			
 		} catch (SQLException e) {
 			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return cursos;
@@ -170,6 +176,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 			
 		} catch (SQLException e) {
 			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return cursos;
@@ -213,6 +221,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 			
 		} catch (SQLException e1) {
 			throw new BusinessException("Error al comprobar si existe curso", e1);
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return existe;
@@ -242,6 +252,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		
@@ -250,10 +262,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 	
 
 	@Override
-	public void setConnection(Connection conection) throws SQLException, BusinessException {
-
-			c=Jdbc.getConnection();
-
+	public void setConnection(Connection conection) {
+			this.c=conection;
 	}
 
 	

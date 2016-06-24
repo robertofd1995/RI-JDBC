@@ -43,19 +43,16 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	@Override
 	public void save(List<Map<String, String>> mecanicos) throws BusinessException {
 		
-		try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}
-		
+
+		c = Jdbc.getConnection();
+
 		try {
 			pst=c.prepareStatement(SQL_INSERT_MECANICO);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		for (Map<String, String> mecanico : mecanicos) {
 			try {
 				pst.setString(1, mecanico.get("nombre"));
@@ -64,6 +61,8 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}finally {
+				Jdbc.close(pst);
 			}
 		}
 		
@@ -87,7 +86,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			throw new RuntimeException(e);
 		}
 		finally {
-			Jdbc.close(rs, pst, c);
+			Jdbc.close(rs, pst);
 		}
 		
 	}
@@ -120,7 +119,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			throw new RuntimeException(e);
 		}
 		finally {
-			Jdbc.close(rs, pst, c);
+			Jdbc.close(rs, pst);
 		}
 		return result;
 	}
@@ -140,7 +139,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			throw new RuntimeException(e);
 		}
 		finally {
-			Jdbc.close(rs, pst, c);
+			Jdbc.close(pst);
 		}
 		
 	}
@@ -164,6 +163,8 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			existe= (rs.getLong(1)==1)?true:false;
 		} catch (SQLException e) {
 			throw new BusinessException("Error al comprobar existencia de mecanico");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return existe;
@@ -215,6 +216,8 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			
 		} catch (SQLException e) {
 			throw new BusinessException("Error durante el listado");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return formacion;
@@ -265,12 +268,10 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			
 		} catch (SQLException e) {
 			throw new BusinessException("Error durante el listado");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return tipos;
 	}
-
-	
-
-
 }

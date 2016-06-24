@@ -26,12 +26,9 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 	@Override
 	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
 		
-		try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}
-		
+
+		c = Jdbc.getConnection();
+
 		ArrayList<HashMap<String, Object>> tipos=new ArrayList<HashMap<String, Object>>();
 		
 		try {
@@ -52,6 +49,8 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 			
 		} catch (SQLException e) {
 			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		return tipos;		
 	}
@@ -78,6 +77,8 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 			
 		} catch (SQLException e) {
 			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		return tipos;		
 	}

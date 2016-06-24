@@ -9,7 +9,7 @@ import uo.ri.common.BusinessException;
 
 public interface GatewayCursos {
 
-    void setConnection(Connection conection) throws SQLException, BusinessException;
+    void setConnection(Connection conection);
 	void save(ArrayList<HashMap<String, Object>> cursos) throws BusinessException;
 	ArrayList<HashMap<String, Object>> listar();
 	ArrayList<HashMap<String, Object>> listarConFragmentos();

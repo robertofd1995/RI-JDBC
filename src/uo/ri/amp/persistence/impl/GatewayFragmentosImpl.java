@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import alb.util.console.Console;
+import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.Conf;
 import uo.ri.amp.persistence.GatewayFragmentos;
 import uo.ri.common.BusinessException;
@@ -23,9 +24,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 	private final String SQL_INSERT_FRAGMENTO=Conf.get("SQL_INSERT_FRAGMENTO");
 	private final String SQL_BORRAR_FRAGMENTOS_ASOCIADOS_CURSO=Conf.get("SQL_BORRAR_FRAGMENTOS_ASOCIADOS_CURSO");
 	private final String SQL_EXISTE_FRAGMENTO_CON_CURSO=Conf.get("SQL_EXISTE_FRAGMENTO_CON_CURSO");
-	
-	
-	
+
 
 	@Override
 		public ArrayList<HashMap<String, Object>> listar_fragmentos() {
@@ -37,8 +36,6 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			rs=pst.executeQuery();
 			
 			while (rs.next()) {
-				
-				
 				HashMap<String, Object> fragmento=new HashMap<String, Object>();
 				fragmento.put("horas", rs.getDouble("HORAS"));
 				fragmento.put("tipo_id", rs.getString("TIPO_ID"));
@@ -49,6 +46,8 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			
 		} catch (SQLException e) {
 			Console.println("Error al ejecutar operacion (listar fragmentos))");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return fragmentos;
@@ -64,8 +63,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 		rs=pst.executeQuery();
 		
 		while (rs.next()) {
-			
-			
+
 			HashMap<String, Object> fragmento=new HashMap<String, Object>();
 			fragmento.put("horas", rs.getDouble("HORAS"));
 			fragmento.put("tipo_id", rs.getString("TIPO_ID"));
@@ -76,6 +74,8 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 		
 	} catch (SQLException e) {
 		Console.println("Error al ejecutar operacion (listar fragmentos por curso))");
+	}finally {
+		Jdbc.close(rs,pst);
 	}
 	
 	return fragmentos;
@@ -83,8 +83,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 
 	@Override
 	public void borrarFragmentosAsociadosACurso(long id_curso) throws BusinessException {
-		
-		
+
 		try {
 			c.setAutoCommit(false);
 			pst=c.prepareStatement(SQL_EXISTE_FRAGMENTO_CON_CURSO);
@@ -108,6 +107,8 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			c.setAutoCommit(true);
 		} catch (SQLException e) {
 			throw new BusinessException("Error al eliminar fragmento");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 	}
@@ -120,11 +121,13 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			try {
 				pst=c.prepareStatement(SQL_INSERT_FRAGMENTO);
 				pst.setDouble(1, (Double) fragmento.get("porcentaje"));
-				pst.setLong(2, (Long)fragmento.get("id_tipo"));  //comprobar primero que el id_tipo es valido , ¿pedir nombre o listar los id_tipo?
+				pst.setLong(2, (Long)fragmento.get("id_tipo"));  //comprobar primero que el id_tipo es valido , ï¿½pedir nombre o listar los id_tipo?
 				pst.setLong(3, id_curso);
 				pst.executeUpdate();
 			} catch (SQLException e) {
 				throw new BusinessException("Error al introducir segmento");
+			}finally {
+				Jdbc.close(pst);
 			}
 			
 			

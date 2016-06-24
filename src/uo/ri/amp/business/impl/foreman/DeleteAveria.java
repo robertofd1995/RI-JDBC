@@ -21,18 +21,12 @@ public class DeleteAveria {
 		
 		GatewayAverias gateway = APersistenceFactory.getAveriasGateway();
 		
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		try {
 			gateway.delete(this.id);
-		} catch (BusinessException e) {
-			Console.println(e.getMessage());
+		} finally {
+			Jdbc.close(c);
 		}
 		
 	}

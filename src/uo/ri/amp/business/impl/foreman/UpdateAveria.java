@@ -41,16 +41,13 @@ public class UpdateAveria {
 	public void execute() throws BusinessException {
 		GatewayAverias gateway=APersistenceFactory.getAveriasGateway();
 		
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+			gateway.update(id,nombre,fecha,importe);
+		}finally {
+			Jdbc.close(c);
 		}
-		
-		gateway.update(id,nombre,fecha,importe);
-		
 	}
 
 }

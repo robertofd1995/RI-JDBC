@@ -2,9 +2,6 @@ package uo.ri.amp.business.impl.admin.asistencia;
 
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.SQLException;
-
-import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.persistence.GatewayAsistencias;
@@ -25,20 +22,11 @@ public class EliminarAsistencia {
 
 	public void execute() throws BusinessException {
 		GatewayAsistencias gateway = APersistenceFactory.getAsistenciaGateway();
-		Connection c=null;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-	
-		
-		try {
 			gateway.eliminarAsistencia(curso_id, mecanico_id,finicio);
-		}
-		
-		finally {
+		}finally {
 			Jdbc.close(c);
 		}
 	}

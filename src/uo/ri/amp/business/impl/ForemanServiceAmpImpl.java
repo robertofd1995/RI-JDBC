@@ -52,7 +52,7 @@ public class ForemanServiceAmpImpl  implements ForemanServiceAmp{
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> historialVehiculo(String matricula) {
+	public ArrayList<HashMap<String, Object>> historialVehiculo(String matricula) throws BusinessException {
 		// TODO Auto-generated method stub
 		return new HistorialVehiculo(matricula).execute();
 	}

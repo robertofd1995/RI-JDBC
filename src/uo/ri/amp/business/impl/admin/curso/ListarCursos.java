@@ -16,14 +16,15 @@ public class ListarCursos {
 public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		GatewayCursos gateway=APersistenceFactory.getCursosGateway();
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+
+			return gateway.listarConFragmentos();
+		}finally {
+			Jdbc.close(c);
 		}
-		return gateway.listarConFragmentos();
+
 	}
 
 }

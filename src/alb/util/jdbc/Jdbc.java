@@ -32,7 +32,7 @@ public class Jdbc {
 		}
 	}
 	
-	public static Connection getConnection() throws SQLException, BusinessException {
+	public static Connection getConnection() throws BusinessException {
 
 		try {
 			return DriverManager.getConnection(URL, USER, PASS);

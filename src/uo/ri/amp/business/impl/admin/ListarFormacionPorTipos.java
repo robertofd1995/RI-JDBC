@@ -19,21 +19,13 @@ public class ListarFormacionPorTipos {
 		
 		GatewayMecanico gateway = APersistenceFactory.getMecanicoGateway();
 		
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-	
-		
-		try {
 			tipos=gateway.listarFormacionPorTipos();
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+		}finally {
+			Jdbc.close(c);
 		}
-		
 		return tipos;
 	}
 

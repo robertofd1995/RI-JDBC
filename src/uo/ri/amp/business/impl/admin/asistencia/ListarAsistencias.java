@@ -20,22 +20,11 @@ public class ListarAsistencias {
 		ArrayList<HashMap<String, Object>> asistencias=null;
 		
 		GatewayAsistencias gateway = APersistenceFactory.getAsistenciaGateway();
-		Connection c=null;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		
-		try {
 			asistencias= gateway.listarAsistenciasPorCurso();
-		} catch (BusinessException e) {
-			Console.println(e.toString());
-		}
-		
-		finally {
+		}finally {
 			Jdbc.close(c);
 		}
 		return asistencias;

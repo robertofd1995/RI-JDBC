@@ -51,22 +51,16 @@ public class GatewayVehiculoImpl implements GatewayVehiculo{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			Jdbc.close(rs,pst);
 		}
-		
-		
-		
 		return id;
 	}
 
 
 	@Override
 	public void setConnection(Connection conection) throws BusinessException {
-		try {
-			c=Jdbc.getConnection();
-		} catch (SQLException e) {
-			Console.println("error al obtener conexion");
-		}
-		
+		c=Jdbc.getConnection();
 	}
 
 }

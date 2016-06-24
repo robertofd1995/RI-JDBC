@@ -20,27 +20,19 @@ public class ListarMecanicosExpertos {
 	}
 
 	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		ArrayList<HashMap<String, Object>> expertos=null;
 		
 		try {
-			c = Jdbc.getConnection();
-			
+
 			GatewayCertificados gateway = APersistenceFactory.getCertificadosGateway();
 			gateway.setConnection(c);
-			try {
-				expertos=gateway.listarExpertos(idAveria);
-			} catch (BusinessException e) {
-				Console.println(e.toString());
-			}
-			
+			expertos=gateway.listarExpertos(idAveria);
+
+		}finally {
 			Jdbc.close(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
 		}
-		
-		
-		
+
 		return expertos;
 	}
 

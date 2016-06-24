@@ -26,19 +26,23 @@ public class ModificarCurso {
 	public void execute() throws BusinessException {
 		
 		GatewayCursos gateway = APersistenceFactory.getCursosGateway();
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
+
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+			if(gateway.existeCurso(id_curso)) {
+				gateway.modificar(id_curso,nombre,descripcion,totalHoras);
+			}else{
+				throw new BusinessException("El curso que esta intentando modificar no existe");
+			}
+
+		}finally {
+			Jdbc.close(c);
 		}
 
-		if(gateway.existeCurso(id_curso)) {
-			gateway.modificar(id_curso,nombre,descripcion,totalHoras);
-		}else{
-			throw new BusinessException("El curso que esta intentando modificar no existe");
-		}
+
+
+
 		
 	}
 

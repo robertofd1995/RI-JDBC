@@ -17,8 +17,6 @@ public class DeleteCurso {
 	
 	public DeleteCurso(long id_curso) {
 		this.id_curso=id_curso;
-		
-		
 	}
 
 	public void execute() throws BusinessException, SQLException {

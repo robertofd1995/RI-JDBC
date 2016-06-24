@@ -219,11 +219,7 @@ public class GatewayAveriasImpl implements GatewayAverias {
 
 	@Override
 	public void setConnection(Connection conection) throws BusinessException {
-		try {
-			c=Jdbc.getConnection();
-		} catch (SQLException e) {
-			Console.println("error al obtener conexion");
-		}		
+		c=Jdbc.getConnection();
 	}
 
 
@@ -240,6 +236,8 @@ public class GatewayAveriasImpl implements GatewayAverias {
 				existe=true;
 		} catch (SQLException e) {
 			throw new BusinessException("Error al comprobar la existencia de la averia");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return existe;

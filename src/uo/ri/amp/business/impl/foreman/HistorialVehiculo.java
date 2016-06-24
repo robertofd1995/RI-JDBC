@@ -19,23 +19,18 @@ public class HistorialVehiculo  {
 		this.matricula=matricula;
 	}
 
-	public ArrayList<HashMap<String, Object>> execute() {
+	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		ArrayList<HashMap<String, Object>> historial = null;
 		long id;
+		Connection c = Jdbc.getConnection();
 		try {
 			id = APersistenceFactory.getVehiculoGateway().obtenerId(matricula);
 			GatewayAverias gatewayAverias=APersistenceFactory.getAveriasGateway();
-			Connection c;
-			try {
-				c = Jdbc.getConnection();
-				gatewayAverias.setConnection(c);
-			} catch (SQLException e) {
-				Console.println("Error al establecer conexion");
-			}
+			gatewayAverias.setConnection(c);
 			historial=gatewayAverias.obtenerAveriaPorIdVehiculo(id);
-		} catch (BusinessException e) {
-			Console.println(e.getMessage());
+		}finally {
+			Jdbc.close(c);
 		}
 		
 		return historial;

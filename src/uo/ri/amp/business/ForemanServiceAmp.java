@@ -15,7 +15,7 @@ public interface ForemanServiceAmp {
 
 	public void deleteAveria(long id) throws BusinessException;
 
-	public ArrayList<HashMap<String, Object>> historialVehiculo(String matricula);
+	public ArrayList<HashMap<String, Object>> historialVehiculo(String matricula) throws BusinessException;
 
 	public ArrayList<HashMap<String, Object>> listarExpertos(long idAveria) throws BusinessException;
 

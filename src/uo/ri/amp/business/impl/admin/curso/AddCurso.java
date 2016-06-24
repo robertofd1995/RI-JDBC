@@ -22,15 +22,9 @@ public class AddCurso{
 	public void execute() throws BusinessException {
 		
 		GatewayCursos gateway = APersistenceFactory.getCursosGateway();
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		try {
 			gateway.save(this.cursos);
 		} catch (BusinessException e) {
 			Console.println(e.getMessage());

@@ -25,11 +25,7 @@ public class GatewayCertificadosImpl implements GatewayCertificados{
 	
 	@Override
 	public void setConnection(Connection conection) throws BusinessException {
-		try {
-			c=Jdbc.getConnection();
-		} catch (SQLException e) {
-			Console.println("error al obtener conexion");
-		}		
+		c=Jdbc.getConnection();
 	}
 
 	@Override
@@ -39,6 +35,8 @@ public class GatewayCertificadosImpl implements GatewayCertificados{
 			pst.executeUpdate();
 		} catch (SQLException e) {
 			throw new BusinessException("Error al generar certificados");
+		}		finally {
+			Jdbc.close(pst);
 		}
 		
 	}
@@ -62,6 +60,8 @@ public class GatewayCertificadosImpl implements GatewayCertificados{
 			}
 		} catch (SQLException e) {
 			throw new BusinessException("Error durante el listado de expertos");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return expertos;

@@ -16,12 +16,11 @@ public class ListarTiposVehiculos {
 	public ArrayList<HashMap<String, Object>> execute() throws BusinessException {
 		
 		GatewayTipoVehiculo gateway = APersistenceFactory.getTipoVehiculoGateway();
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+		}finally {
+			Jdbc.close(c);
 		}
 		return gateway.listar();
 		

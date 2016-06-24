@@ -22,15 +22,10 @@ public class ModificarAsistencia {
 
 	public void execute() throws BusinessException {
 		GatewayAsistencias gateway = APersistenceFactory.getAsistenciaGateway();
-		Connection c=null;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
+
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		try {
 
 			if (gateway.comprobarAsistencia((Long) asistencia.get("curso_id"),
 					(Long) asistencia.get("mecanico_id"), (Date) asistencia.get("finicio")) ) {
@@ -39,8 +34,7 @@ public class ModificarAsistencia {
 				throw new BusinessException("La asistencia que esta intentando modificar no existe ," +
 						" asegurese de haber introducido la fecha original");
 			}
-		}
-		finally {
+		}finally {
 			Jdbc.close(c);
 		}
 	}

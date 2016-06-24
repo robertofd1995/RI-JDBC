@@ -50,25 +50,15 @@ public class AddAveria {
 		
 		averias.add(averia);
 		
-		Connection c=null;
+		Connection c = Jdbc.getConnection();
 		GatewayAverias gateway=APersistenceFactory.getAveriasGateway();
 		
 		try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.println("error al establecer conexion");
+			gateway.setConnection(c);
+			gateway.save(averias);
+		}finally {
+			Jdbc.close(c);
 		}
-		
-		
-		gateway.setConnection(c);
-		gateway.save(averias);
-		
-		Jdbc.close(c);
-		
-		
-		
-		
-		
 	}
 
 }

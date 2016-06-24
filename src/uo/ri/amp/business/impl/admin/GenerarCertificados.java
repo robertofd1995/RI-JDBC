@@ -13,19 +13,12 @@ public class GenerarCertificados {
 	public void execute() throws BusinessException {
 		GatewayCertificados gateway = APersistenceFactory.getCertificadosGateway();
 		
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-			
-		}
-		
-		try {
 			gateway.generarCertificados();
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+		} finally {
+			Jdbc.close(c);
 		}
 	}
 

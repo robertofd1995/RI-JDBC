@@ -17,25 +17,18 @@ public class ComprobarAveria {
 		this.idAveria=idAveria;
 	}
 
-	public boolean execute() throws BusinessException {
-		Connection c;
+	public boolean execute() throws BusinessException{
+
+		Connection c = Jdbc.getConnection();
 		boolean existe=false;
 		try {
-			c = Jdbc.getConnection();
-			
-			
-			
+
 			GatewayAverias gateway = APersistenceFactory.getAveriasGateway();
 			gateway.setConnection(c);
+			existe=gateway.comprobarAveria(idAveria);
 			
-			try {
-				existe=gateway.comprobarAveria(idAveria);
-			} catch (BusinessException e) {
-				Console.println(e.toString());
-			}
-			
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
+		}finally {
+			Jdbc.close(c);
 		}
 		
 		return existe;

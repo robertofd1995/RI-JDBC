@@ -1,8 +1,6 @@
 package uo.ri.amp.business.impl.foreman;
 
 import java.sql.Connection;
-import java.sql.SQLException;
-
 import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
@@ -20,40 +18,22 @@ public class AsignarAveria {
 
 
 	public void execute() throws BusinessException {
-		Connection c=null;
-		boolean existe=false;
+		Connection c = Jdbc.getConnection();
+		boolean existe = false;
 		try {
-			c = Jdbc.getConnection();
-			
 			GatewayAverias gateway = APersistenceFactory.getAveriasGateway();
 			gateway.setConnection(c);
-			
-			try {
-				existe=gateway.comprobarAveria(idAveria);
-				if (!existe) {
-					Console.print("ERROR :La averias que esta asignar no existe");
-				}
-			} catch (BusinessException e1) {
-				Console.print("La averias que esta asignar no existe");
-			}
-			
-			try {
-				gateway.asignarAverias(idAveria,mecanico_id);
-			} catch (BusinessException e) {
-				Console.println(e.toString());
-			}
-			
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		finally {
-			Jdbc.close(c);
-		}
-		
-		
-		
-		
-	}
 
+			existe = gateway.comprobarAveria(idAveria);
+			if (!existe) {
+				Console.print("ERROR :La averias que esta asignar no existe");
+			}
+			gateway.asignarAverias(idAveria, mecanico_id);
+			} finally {
+				Jdbc.close(c);
+			}
+
+	}
 }
+
+

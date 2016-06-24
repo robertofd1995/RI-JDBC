@@ -22,20 +22,13 @@ public class ListarFormacion {
 		GatewayMecanico gateway = APersistenceFactory.getMecanicoGateway();
 		HashMap<String, Object> formacion = null;
 		
-		Connection c;
+		Connection c = Jdbc.getConnection();
 		try {
-			c = Jdbc.getConnection();
 			gateway.setConnection(c);
-		} catch (SQLException e) {
-			Console.println("Error al establecer conexion");
-		}
-		
-		try {
 			formacion= gateway.listarFormacionMecanico(mecanico_id);
-		} catch (BusinessException e) {
-			Console.println(e.toString());
+		}finally {
+			Jdbc.close(c);
 		}
-		
 		return formacion;
 	}
 

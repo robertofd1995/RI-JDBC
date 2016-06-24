@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.conf.Conf;
 import uo.ri.amp.persistence.GatewayAsistencias;
@@ -102,14 +103,12 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 				
 			} catch (SQLException e) {
 				throw new BusinessException("Error durante la operacion de insertacion de mecanicos");
+			}finally {
+				Jdbc.close(pst);
 			}
-			
-			
-			
+
 		}
-		
-		
-		
+
 	}
 	
 	@Override
@@ -126,6 +125,8 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 				pst.executeUpdate();
 			} catch (SQLException e) {
 				throw new BusinessException("Error al intentar borrar la asistencia");
+			}finally {
+				Jdbc.close(pst);
 			}
 		}
 		
@@ -185,6 +186,8 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 				
 			} catch (SQLException e) {
 				throw new BusinessException("Error durante operacion de listado");
+			}finally {
+				Jdbc.close(rs,pst);
 			}
 		}
 		
@@ -209,6 +212,8 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 				tieneAsistencia=false;
 		} catch (SQLException e) {
 			throw new BusinessException("error al comprobar asistencia curso");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return tieneAsistencia;
@@ -234,6 +239,8 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 				existe=true;
 		} catch (SQLException e) {
 			throw new BusinessException("Error al comprobar la asistencia");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
 		
 		return existe;
@@ -268,12 +275,9 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 		
 		} catch (SQLException e) {
 			throw new BusinessException("Error al intentar modificar asistencia");
+		}finally {
+			Jdbc.close(pst);
 		}
-		
-		
-		
-		
-		
 	}
 
 	
