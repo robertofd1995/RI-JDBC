@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="HSQLDB (Local) - jdbc:hsqldb:hsql://localhost" uuid="b91d2493-e6f4-4d21-b0fb-fd4384c61e50">
+    <database-info product="HSQL Database Engine" version="2.3.2" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.2">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PUBLIC"/>
+    <table name="TASISTENCIAS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="FINICIO" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="FFINAL" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="ASISTENCIA" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <column name="STATUS" sqlType="BOOLEAN" precision="0" scale="0" nullable="true" jdbcType="16"/>
+      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="CURSO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="TASISTENCIAS_PK" columns="FINICIO,MECANICO_ID,CURSO_ID"/>
+      <foreign-key name="ASISTENCIA_CURSO_FK" columns="CURSO_ID" ref-table="TCURSOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="ASISTENCIA_MECANICO_FK" columns="MECANICO_ID" ref-table="TMECANICOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TAVERIAS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="DESCRIPCION" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="FECHA" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="IMPORTE" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <column name="STATUS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FACTURA_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="VEHICULO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10092" columns="ID"/>
+      <foreign-key name="FK53784C85F30BA8BE" columns="FACTURA_ID" ref-table="TFACTURAS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FK53784C85C447EF16" columns="MECANICO_ID" ref-table="TMECANICOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FK53784C85A3A4F216" columns="VEHICULO_ID" ref-table="TVEHICULOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TCARGOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="IMPORTE" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <column name="FACTURA_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="MEDIOPAGO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10100" columns="FACTURA_ID,MEDIOPAGO_ID"/>
+      <foreign-key name="FKD36C6DABF30BA8BE" columns="FACTURA_ID" ref-table="TFACTURAS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FKD36C6DAB740C0EFE" columns="MEDIOPAGO_ID" ref-table="TMEDIOSPAGO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TCERTIFICADOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="TIPO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="FECHA" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <foreign-key name="CERTIFICADO_MECANICO_FK" columns="MECANICO_ID" ref-table="TMECANICOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="CERTIFICADO_TIPO_FK" columns="TIPO_ID" ref-table="TTIPOSVEHICULO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TCLIENTES" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="CITY" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STREET" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ZIPCODE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="APELLIDOS" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DNI" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NOMBRE" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="SYS_PK_10104" columns="ID"/>
+    </table>
+    <table name="TCURSOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="NOMBRE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DESCRIPCION" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TOTALHORAS" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <primary-key name="SYS_PK_10198" columns="ID"/>
+    </table>
+    <table name="TFACTURAS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="FECHA" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="IMPORTE" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <column name="IVA" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <column name="NUMERO" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="STATUS" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="SYS_PK_10114" columns="ID"/>
+    </table>
+    <table name="TFRAGMENTOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="HORAS" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <column name="TIPO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="CURSO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="TFRAGMENTOS_PK" columns="TIPO_ID,CURSO_ID"/>
+      <foreign-key name="FRAGMENTOS_CURSO_FK" columns="CURSO_ID" ref-table="TCURSOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FRAGMENTOS_MECANICO_FK" columns="TIPO_ID" ref-table="TTIPOSVEHICULO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TINTERVENCIONES" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="MINUTOS" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="AVERIA_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10130" columns="AVERIA_ID,MECANICO_ID"/>
+      <foreign-key name="FK2132D8AAF5C7F4F6" columns="AVERIA_ID" ref-table="TAVERIAS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FK2132D8AAC447EF16" columns="MECANICO_ID" ref-table="TMECANICOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TMECANICOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="APELLIDOS" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NOMBRE" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="SYS_PK_10136" columns="ID"/>
+    </table>
+    <table name="TMEDIOSPAGO" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="DTYPE" sqlType="VARCHAR" precision="31" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="ACUMULADO" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <column name="CODIGO" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DISPONIBLE" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <column name="NUMERO" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TIPO" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="VALIDEZ" sqlType="TIMESTAMP" precision="26" scale="0" nullable="true" jdbcType="93"/>
+      <column name="CLIENTE_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10145" columns="ID"/>
+      <foreign-key name="FKDE69A06E3376017E" columns="CLIENTE_ID" ref-table="TCLIENTES" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TREPUESTOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="CODIGO" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DESCRIPCION" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PRECIO" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <primary-key name="SYS_PK_10154" columns="ID"/>
+    </table>
+    <table name="TSUSTITUCIONES" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="CANTIDAD" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="REPUESTO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="INTERVENCION_AVERIA_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="INTERVENCION_MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10165" columns="INTERVENCION_AVERIA_ID,INTERVENCION_MECANICO_ID,REPUESTO_ID"/>
+      <foreign-key name="FK47B3E086796D8453" columns="INTERVENCION_AVERIA_ID,INTERVENCION_MECANICO_ID" ref-table="TINTERVENCIONES" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="AVERIA_ID,MECANICO_ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FK47B3E086A6634896" columns="REPUESTO_ID" ref-table="TREPUESTOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+    <table name="TTIPOSVEHICULO" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="NOMBRE" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PRECIOHORA" sqlType="DOUBLE" precision="64" scale="0" nullable="false" jdbcType="8"/>
+      <column name="HORAS_EXPERTO" sqlType="DOUBLE" precision="64" scale="0" nullable="true" jdbcType="8"/>
+      <primary-key name="SYS_PK_10174" columns="ID"/>
+    </table>
+    <table name="TVEHICULOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="MARCA" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="MATRICULA" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="MODELO" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NUM_AVERIAS" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="CLIENTE_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="TIPO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="SYS_PK_10182" columns="ID"/>
+      <foreign-key name="FK294BF1BA3376017E" columns="CLIENTE_ID" ref-table="TCLIENTES" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <foreign-key name="FK294BF1BA3ADD373B" columns="TIPO_ID" ref-table="TTIPOSVEHICULO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+    </table>
+  </data-source>
+</component>

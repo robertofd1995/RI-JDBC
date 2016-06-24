@@ -17,7 +17,7 @@ public class AddCursoAction implements Action {
 	@Override
 	public void execute() throws Exception {
 		
-		Console.println("Añadir Curso \n");
+		Console.println("Aï¿½adir Curso \n");
 		
 		ArrayList<HashMap<String, Object>> cursos=new ArrayList<HashMap<String,Object>>();
 		
@@ -59,16 +59,16 @@ public class AddCursoAction implements Action {
 							
 							double porcentaje=Console.readDouble("porcentaje ");
 							
-							if(acumulador+porcentaje>totalHoras){
+							if(acumulador+( (porcentaje/100)*totalHoras ) >totalHoras){
 								Console.println("La suma de las horas de los fragmentos exceden las del curso");
-								Console.println("Curso no añadido");
+								Console.println("Curso no aï¿½adido");
 								break;
 							}else{
-								acumulador+=porcentaje;
+								acumulador+=( (porcentaje/100)*totalHoras );
 							}
 							
 							fragmento.put("id_tipo", id_tipo);
-							fragmento.put("porcentaje", porcentaje);
+							fragmento.put("porcentaje", (porcentaje/100)*totalHoras);
 						} catch (RuntimeException e) {
 							Console.println("ERROR : ha intentado introducir caracteres como numeros");
 							break;
