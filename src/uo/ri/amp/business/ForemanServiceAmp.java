@@ -7,8 +7,20 @@ import java.util.HashMap;
 
 public interface ForemanServiceAmp {
 
+	/**
+	 *
+	 * @param nombre
+	 * @param fecha
+	 * @param importe
+	 * @param vehiculo_id
+     */
 	public void addAveria(String nombre, String fecha, double importe, long vehiculo_id);
 
+	/**
+	 *
+	 * @return
+	 * @throws BusinessException
+     */
 	public ArrayList<HashMap<String, Object>> listar() throws BusinessException;
 	
 	public void updateAveria(long id,String nombre, String fecha, double importe);

@@ -6,6 +6,7 @@ import alb.util.console.Console;
 import alb.util.menu.Action;
 import uo.ri.amp.business.AdminSercviceAmp;
 import uo.ri.amp.conf.AServicesFactory;
+import uo.ri.common.BusinessException;
 
 /**
  * En esta clase se llevara a cabo la obtencion de datos para insertar un curso
@@ -60,9 +61,10 @@ public class AddCursoAction implements Action {
 							double porcentaje=Console.readDouble("porcentaje ");
 							
 							if(acumulador+( (porcentaje/100)*totalHoras ) >totalHoras){
-								Console.println("La suma de las horas de los fragmentos exceden las del curso");
-								Console.println("Curso no a�adido");
-								break;
+								throw new BusinessException("La suma de las horas de los fragmentos exceden las del" +
+										" curso \n Curso no anadido");
+
+
 							}else{
 								acumulador+=( (porcentaje/100)*totalHoras );
 							}

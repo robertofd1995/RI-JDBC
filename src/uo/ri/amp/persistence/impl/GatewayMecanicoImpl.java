@@ -57,7 +57,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			try {
 				pst.setString(1, mecanico.get("nombre"));
 				pst.setString(2, mecanico.get("apellidos"));
-				pst.executeQuery();
+				pst.executeUpdate();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

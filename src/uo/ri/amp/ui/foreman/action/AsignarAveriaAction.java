@@ -38,8 +38,18 @@ public class AsignarAveriaAction implements Action{
 		
 		long mecanico_id=Console.readLong("Introduzca el id del mecanico al que le quiere asignar la averia");
 
-		if ( !mecanicosExpertos.stream().allMatch(m -> m.get("id").equals(mecanico_id)) )
+
+		boolean contains=false;
+
+		for (HashMap m:mecanicosExpertos
+			 ) {
+			if(m.get("id").equals(mecanico_id))
+				contains=true;
+		}
+
+		if ( !contains )
 			throw new BusinessException("El id introducido no pertenece a uno de los dados");
+
 
 		AServicesFactory.getForemanService().asignarAveria(idAveria,mecanico_id);
 		
