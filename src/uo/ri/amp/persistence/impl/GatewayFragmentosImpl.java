@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.Conf;
 import uo.ri.amp.persistence.GatewayFragmentos;
@@ -28,7 +26,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 
 
 	@Override
-		public ArrayList<HashMap<String, Object>> listar_fragmentos() {
+		public ArrayList<HashMap<String, Object>> listar_fragmentos() throws BusinessException {
 		ArrayList<HashMap<String, Object>> fragmentos=new ArrayList<HashMap<String, Object>>();
 		
 		try {
@@ -46,7 +44,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			}
 			
 		} catch (SQLException e) {
-			Console.println("Error al ejecutar operacion (listar fragmentos))");
+			throw new BusinessException("Error al ejecutar operacion (listar fragmentos))");
 		}finally {
 			Jdbc.close(rs,pst);
 		}
@@ -55,7 +53,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 	}
 	
 	@Override
-		public ArrayList<HashMap<String, Object>> listar_fragmentos_por_curso(long curso_id) {
+		public ArrayList<HashMap<String, Object>> listar_fragmentos_por_curso(long curso_id) throws BusinessException {
 	ArrayList<HashMap<String, Object>> fragmentos=new ArrayList<HashMap<String, Object>>();
 	
 	try {
@@ -74,7 +72,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 		}
 		
 	} catch (SQLException e) {
-		Console.println("Error al ejecutar operacion (listar fragmentos por curso))");
+		throw new BusinessException("Error al ejecutar operacion (listar fragmentos por curso))");
 	}finally {
 		Jdbc.close(rs,pst);
 	}

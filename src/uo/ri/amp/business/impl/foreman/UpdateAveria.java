@@ -22,19 +22,13 @@ public class UpdateAveria {
 	public UpdateAveria(long id, String nombre, String fecha, double importe) throws BusinessException {
 		this.id=id;
 		this.nombre=nombre;
-		
-		 
-		
+
 		try {
 			this.fecha=new Date(DateUtil.fromString(fecha).getTime());
 		} 
 		catch (IllegalArgumentException e) {
-			
 			throw new BusinessException("\nADVERTENCIA :Formato no valido");
-		}/*catch (NumberFormatException e) {
-			Console.println("el formato de la fecha no es valido");
-		}*/
-		
+		}
 		this.importe=importe;
 	}
 

@@ -6,11 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.conf.Conf;
-import uo.ri.amp.persistence.GatewayAsistencias;
 import uo.ri.amp.persistence.GatewayCursos;
 import uo.ri.amp.persistence.GatewayFragmentos;
 import uo.ri.common.BusinessException;
@@ -97,7 +95,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 			pst.setLong(4, id_curso);
 			pst.executeUpdate();
 		} catch (SQLException e) {
-			Console.println("Error durante la operacion (modificar curso)");
+			throw new BusinessException("Error durante la operacion (modificar curso)");
 		}finally {
 			Jdbc.close(pst);
 		}
@@ -134,7 +132,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 	}
 	
 	@Override
-	public ArrayList<HashMap<String, Object>> listarConFragmentos() {
+	public ArrayList<HashMap<String, Object>> listarConFragmentos() throws BusinessException {
 		
 		ArrayList<HashMap<String, Object>> cursos=new ArrayList<HashMap<String, Object>>();
 		GatewayFragmentos gatewayFragmentos=APersistenceFactory.getFragmentosGateway();
@@ -158,7 +156,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 			}
 			
 		} catch (SQLException e) {
-			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+			throw new BusinessException("Error al ejecutar operacion (listar tipos vehiculos))");
 		}finally {
 			Jdbc.close(rs,pst);
 		}

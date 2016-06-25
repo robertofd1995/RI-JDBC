@@ -28,7 +28,7 @@ public class AddAveria {
 		try {
 			this.fecha=DateUtil.fromString(fecha);
 		} catch (NumberFormatException e) {
-			Console.println("el formato de la fecha no es valido");
+			throw new BusinessException("el formato de la fecha no es valido");
 		}
 		
 		this.importe=importe;

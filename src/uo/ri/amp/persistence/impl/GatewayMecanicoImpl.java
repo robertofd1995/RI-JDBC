@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.conf.Conf;
@@ -119,7 +117,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	}
 
 	@Override
-	public void update(Map<String, Object> mecanico) {
+	public void update(Map<String, Object> mecanico) throws BusinessException {
 		
 		try {
 			
@@ -130,7 +128,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			pst.executeUpdate();
 			
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			throw new BusinessException("SE ha producido un error al intentar actualizar un mecanico");
 		}
 		finally {
 			Jdbc.close(pst);

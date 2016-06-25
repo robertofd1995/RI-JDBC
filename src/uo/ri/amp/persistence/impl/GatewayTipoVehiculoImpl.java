@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.Conf;
 import uo.ri.amp.persistence.GatewayTipoVehiculo;
@@ -46,7 +45,7 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 			}
 			
 		} catch (SQLException e) {
-			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+			throw new BusinessException("Error al ejecutar operacion (listar tipos vehiculos))");
 		}finally {
 			Jdbc.close(rs,pst);
 		}
@@ -54,7 +53,7 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 	}
 	
 	@Override
-	public ArrayList<HashMap<String, Object>> listarId_Nombre() {
+	public ArrayList<HashMap<String, Object>> listarId_Nombre() throws BusinessException {
 		
 		
 		ArrayList<HashMap<String, Object>> tipos=new ArrayList<HashMap<String, Object>>();
@@ -74,7 +73,7 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 			}
 			
 		} catch (SQLException e) {
-			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+			throw new BusinessException("Error al ejecutar operacion (listar tipos vehiculos))");
 		}finally {
 			Jdbc.close(rs,pst);
 		}

@@ -12,6 +12,6 @@ public interface GatewayTipoVehiculo {
 	
 	public ArrayList<HashMap<String, Object>> listar() throws BusinessException;
 
-	ArrayList<HashMap<String, Object>> listarId_Nombre();
+	ArrayList<HashMap<String, Object>> listarId_Nombre() throws BusinessException;
 	
 }
