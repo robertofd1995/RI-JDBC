@@ -9,6 +9,7 @@ import alb.util.console.Console;
 import alb.util.jdbc.Jdbc;
 import uo.ri.amp.conf.APersistenceFactory;
 import uo.ri.amp.persistence.GatewayAverias;
+import uo.ri.amp.persistence.GatewayVehiculo;
 import uo.ri.common.BusinessException;
 
 public class HistorialVehiculo  {
@@ -25,11 +26,16 @@ public class HistorialVehiculo  {
 		long id;
 		Connection c = Jdbc.getConnection();
 		try {
-			id = APersistenceFactory.getVehiculoGateway().obtenerId(matricula);
+			c.setAutoCommit(false);
+			GatewayVehiculo gatewayVehiculos = APersistenceFactory.getVehiculoGateway();
 			GatewayAverias gatewayAverias=APersistenceFactory.getAveriasGateway();
+			gatewayVehiculos.setConnection(c);
 			gatewayAverias.setConnection(c);
-			historial=gatewayAverias.obtenerAveriaPorIdVehiculo(id);
-		}finally {
+			historial=gatewayAverias.obtenerAveriaPorIdVehiculo(gatewayVehiculos.obtenerId(matricula));
+			c.commit();
+		} catch (SQLException e) {
+			throw new BusinessException("Ha ocurrido un problema durante la conexion");
+		} finally {
 			Jdbc.close(c);
 		}
 		
