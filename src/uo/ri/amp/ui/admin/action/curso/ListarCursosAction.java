@@ -25,14 +25,15 @@ public class ListarCursosAction implements Action {
 		ArrayList<HashMap<String, Object>> cursos=AServicesFactory.getAdminService().listarCursos();
 		ArrayList<HashMap<String, Object>> fragmentos;
 		
-		boolean resuesta=(Console.readString("¿desea listar el curso con los fragmentos asociados? y/n").contains("y")==true);
+		boolean resuesta=(Console.readString("ï¿½desea listar el curso con los fragmentos asociados? y/n").contains("y")==true);
 		Console.println("\n\t ID -- nombre -- descripcion -- total horas");
 		
 		StringBuilder str=new StringBuilder();
 		
 		for (HashMap<String, Object> curso : cursos) {
 			
-			str.append("\n\t"+curso.get("id")+" --- "+curso.get("nombre")+" --- "+curso.get("descripcion")+" --- "+curso.get("totalhoras"));
+			str.append("\n\t"+curso.get("id")+" --- "+curso.get("nombre")+" --- "+curso.get("descripcion")
+					+" --- "+curso.get("totalhoras"));
 			if(resuesta){
 				fragmentos=(ArrayList<HashMap<String, Object>>)curso.get("fragmentos");
 						for (HashMap<String, Object> fragmento : fragmentos) {
@@ -40,8 +41,6 @@ public class ListarCursosAction implements Action {
 						}
 				str.append("\n");		
 			}
-				
-			
 		}
 		
 		Console.println(str.toString());

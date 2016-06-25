@@ -18,8 +18,6 @@ public class EliminarAsistencia {
 		this.finicio=finicio;
 	}
 
-	
-
 	public void execute() throws BusinessException {
 		GatewayAsistencias gateway = APersistenceFactory.getAsistenciaGateway();
 		Connection c = Jdbc.getConnection();

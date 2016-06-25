@@ -16,7 +16,7 @@ public interface GatewayCursos {
 	void modificar(long id_curso, String nombre, String descripcion, double totalHoras) throws BusinessException;
 	void delete(long id_curso) throws BusinessException;
 	public boolean existeCurso(long id_curso) throws BusinessException;
-	public ArrayList<HashMap<String, Object>> listarCursosId();
+	public ArrayList<HashMap<String, Object>> listarCursosId() throws BusinessException;
 	
 	
 

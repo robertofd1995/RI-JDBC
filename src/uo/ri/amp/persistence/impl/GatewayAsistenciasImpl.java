@@ -37,7 +37,6 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 	@Override
 	public void setConnection(Connection conection) {
 		this.c=conection;
-		
 	}
 
 
@@ -48,67 +47,35 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 		Date finicio,ffinal;
 		double pasistencia;
 		boolean status;
-		boolean existeCurso;
-		boolean existeMecanico;
-		
-		GatewayCursos gatewayCurso=APersistenceFactory.getCursosGateway();
-		GatewayMecanico gatewayMecanico = APersistenceFactory.getMecanicoGateway();
-		
-		
+
 		try {
-			gatewayCurso.setConnection(c);
-			gatewayMecanico.setConnection(c);
-			c.setAutoCommit(false);
-		} catch (SQLException e1) {
-			throw new BusinessException("No ha sido posible realizar la transaccion");
-		}
-		
-		for (HashMap<String, Object> asistencia : asistencias) {
-			
-			id_mecanico=(Long) asistencia.get("mecanico_id");
-		    id_curso=(Long) asistencia.get("curso_id");
-			finicio=(Date) asistencia.get("finicio");
-			ffinal=(Date) asistencia.get("ffinal");
-			pasistencia=(Double) asistencia.get("pasistencia");
-			status=(Boolean) asistencia.get("status");
-			
-			if (pasistencia<85) {
-				status=false;
-			}
-			
-			existeCurso=gatewayCurso.existeCurso(id_curso);
-			existeMecanico=gatewayMecanico.existMechanic(id_mecanico);
-			
-			if (!existeMecanico) {
-				throw new BusinessException("La asistencia que esta intentando introducir contiene a un mecanico que no existe");
-			}
-			
-			if (!existeCurso) {
-				throw new BusinessException("La asistencia que esta intentando introducir contiene a un curso que no existe");
-			}
-			
-			try {
+			for (HashMap<String, Object> asistencia : asistencias) {
+
+				id_mecanico=(Long) asistencia.get("mecanico_id");
+				id_curso=(Long) asistencia.get("curso_id");
+				finicio=(Date) asistencia.get("finicio");
+				ffinal=(Date) asistencia.get("ffinal");
+				pasistencia=(Double) asistencia.get("pasistencia");
+				status=(Boolean) asistencia.get("status");
+
 				pst=c.prepareStatement(SQL_INSERTAR_ASISTENCIA);
-				
+
 				pst.setDate(1, finicio);
 				pst.setDate(2, ffinal);
 				pst.setDouble(3, pasistencia);
 				pst.setBoolean(4, status);
 				pst.setLong(5, id_mecanico);
 				pst.setLong(6, id_curso);
-				
+
 				pst.executeUpdate();
-				
+
 				c.commit();
-				
-			} catch (SQLException e) {
-				throw new BusinessException("Error durante la operacion de insertacion de mecanicos");
-			}finally {
-				Jdbc.close(pst);
 			}
-
+		} catch (SQLException e) {
+			throw new BusinessException("Error durante la operacion de insertacion de mecanicos");
+		}finally {
+			Jdbc.close(pst);
 		}
-
 	}
 	
 	@Override

@@ -229,7 +229,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 	}
 	
 	@Override
-	public ArrayList<HashMap<String, Object>> listarCursosId() {
+	public ArrayList<HashMap<String, Object>> listarCursosId() throws BusinessException {
 		
 		ArrayList<HashMap<String, Object>> cursos=new ArrayList<HashMap<String,Object>>();
 		HashMap<String, Object> curso;
@@ -250,8 +250,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Error al realizar el listado de cursos");
 		}finally {
 			Jdbc.close(rs,pst);
 		}

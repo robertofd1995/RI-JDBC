@@ -19,10 +19,8 @@ public class ListarAsistenciasCursoAction implements Action {
 		
 		Console.println("Listar Asistencias por cursos");
 		
-		boolean listarTodo=Console.readString("¿Quiere listar todo? (s/n) ").contains("s");
-		
-		
-		//long id_curso=Console.readLong("Introduzca el id del curso");
+		boolean listarTodo=Console.readString("ï¿½Quiere listar todo? (s/n) ").contains("s");
+
 		
 		ArrayList<HashMap<String, Object>> asistencias=AServicesFactory.getAdminService().listarAsistencias();
 		
