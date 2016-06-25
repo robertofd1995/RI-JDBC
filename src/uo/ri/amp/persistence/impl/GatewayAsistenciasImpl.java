@@ -39,7 +39,6 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 		this.c=conection;
 	}
 
-
 	@Override
 	public void insertarAsistencias(ArrayList<HashMap<String, Object>> asistencias) throws BusinessException {
 		
@@ -117,7 +116,6 @@ public class GatewayAsistenciasImpl implements GatewayAsistencias{
 		
 		for (HashMap<String, Object> curso : cursos) {
 			long id_curso=(Long)curso.get("id");
-			//String nombre_curso=(String)curso.get("nombre");
 			asistencias=new ArrayList<HashMap<String, Object>>();
 			
 			try {

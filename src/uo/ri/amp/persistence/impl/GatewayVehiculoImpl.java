@@ -28,29 +28,24 @@ public class GatewayVehiculoImpl implements GatewayVehiculo{
 	public long obtenerId(String matricula) throws BusinessException {
 		
 		if (c==null) {
-			throw new BusinessException("Conexion establecida");
+			throw new BusinessException("Conexion no establecida");
 		}
 		
 		long id=-1;
 		
 		try {
 			
-			//pst=c.prepareStatement(SQL_OBTENER_ID);
-			
 			pst=c.prepareStatement(SQL_OBTENER_ID,ResultSet.TYPE_SCROLL_INSENSITIVE,
 			        ResultSet.CONCUR_READ_ONLY);
 			
 			pst.setString(1, matricula);
 			rs=pst.executeQuery();
-			
-			 
-			
+
 			rs.last();
 			id=rs.getInt(1);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error interno al intentar realizar la operacion");
 		}finally {
 			Jdbc.close(rs,pst);
 		}

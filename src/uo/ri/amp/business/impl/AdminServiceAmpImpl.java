@@ -14,10 +14,8 @@ import uo.ri.amp.business.impl.admin.asistencia.EliminarAsistencia;
 import uo.ri.amp.business.impl.admin.asistencia.InsertarAsistencias;
 import uo.ri.amp.business.impl.admin.asistencia.ListarAsistencias;
 import uo.ri.amp.business.impl.admin.asistencia.ModificarAsistencia;
-import uo.ri.amp.business.impl.admin.curso.AddCurso;
-import uo.ri.amp.business.impl.admin.curso.DeleteCurso;
-import uo.ri.amp.business.impl.admin.curso.ListarCursos;
-import uo.ri.amp.business.impl.admin.curso.ModificarCurso;
+import uo.ri.amp.business.impl.admin.curso.*;
+import uo.ri.amp.ui.admin.action.curso.ModificarFragmentoAction;
 import uo.ri.common.BusinessException;
 
 
@@ -43,6 +41,11 @@ public class AdminServiceAmpImpl implements AdminSercviceAmp{
 	public void modificarCurso(long id_curso, String nombre, String descripcion, double totalHoras) throws SQLException, BusinessException {
 		new ModificarCurso(id_curso,nombre,descripcion,totalHoras).execute();
 		
+	}
+
+	@Override
+	public void modificarFragmento(long id_curso, long id_tipo, int porcentaje) throws BusinessException {
+		new ModificarFragmento(id_curso,id_tipo,porcentaje).execute();
 	}
 
 	@Override

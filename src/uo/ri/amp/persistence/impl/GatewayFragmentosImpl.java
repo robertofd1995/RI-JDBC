@@ -22,6 +22,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 	private final String SQL_LISTAR_FRAGMENTOS=Conf.get("SQL_LISTAR_FRAGMENTOS");
 	private final String SQL_LISTAR_FRAGMENTOS_POR_CURSO_ID=Conf.get("SQL_LISTAR_FRAGMENTOS_POR_CURSO_ID");
 	private final String SQL_INSERT_FRAGMENTO=Conf.get("SQL_INSERT_FRAGMENTO");
+	private final String SQL_UPDATE_FRAGMENTO=Conf.get("SQL_UPDATE_FRAGMENTO");
 	private final String SQL_BORRAR_FRAGMENTOS_ASOCIADOS_CURSO=Conf.get("SQL_BORRAR_FRAGMENTOS_ASOCIADOS_CURSO");
 	private final String SQL_EXISTE_FRAGMENTO_CON_CURSO=Conf.get("SQL_EXISTE_FRAGMENTO_CON_CURSO");
 
@@ -77,28 +78,31 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 	}finally {
 		Jdbc.close(rs,pst);
 	}
-	
 	return fragmentos;
 }
 
 	@Override
-	public void borrarFragmentosAsociadosACurso(long id_curso) throws BusinessException {
+	public void update(HashMap<String, Object> fragmento) throws BusinessException {
 
 		try {
-			c.setAutoCommit(false);
-			pst=c.prepareStatement(SQL_EXISTE_FRAGMENTO_CON_CURSO);
-			pst.setLong(1, id_curso);
-			rs=pst.executeQuery();
-			
-			rs.next();
-			if(rs.getInt(1)==0){
-				throw new BusinessException("No existen fragmentos asociados a ese curso");
-			}
-		} catch (SQLException e1) {
-			throw new BusinessException("Error al comprobar si existe fragmento", e1);
+			pst=c.prepareStatement(SQL_UPDATE_FRAGMENTO);
+			pst.setInt(1, (Integer) fragmento.get("porcentaje"));
+			pst.setLong(2, (Long)fragmento.get("id_curso"));
+			pst.setLong(3, (Long) fragmento.get("id_tipo"));
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			throw new BusinessException("Error al introducir segmento");
+		}finally {
+			Jdbc.close(pst);
 		}
-		
-		
+
+	}
+
+	@Override
+	public void borrarFragmentosAsociadosACurso(long id_curso) throws BusinessException {
+
+		existeFragmentoEnCurso(id_curso);
+
 		try {
 			pst=c.prepareStatement(SQL_BORRAR_FRAGMENTOS_ASOCIADOS_CURSO);
 			pst.setLong(1, id_curso);
@@ -110,7 +114,22 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 		}finally {
 			Jdbc.close(rs,pst);
 		}
-		
+	}
+
+	private void existeFragmentoEnCurso(long id_curso) throws BusinessException {
+		try {
+			c.setAutoCommit(false);
+			pst=c.prepareStatement(SQL_EXISTE_FRAGMENTO_CON_CURSO);
+			pst.setLong(1, id_curso);
+			rs=pst.executeQuery();
+
+			rs.next();
+			if(rs.getInt(1)==0){
+				throw new BusinessException("No existen fragmentos asociados a ese curso");
+			}
+		} catch (SQLException e1) {
+			throw new BusinessException("Error al comprobar si existe fragmento", e1);
+		}
 	}
 
 	@Override
@@ -129,11 +148,7 @@ public class GatewayFragmentosImpl implements GatewayFragmentos{
 			}finally {
 				Jdbc.close(pst);
 			}
-			
-			
-			//c.commit();
 		}
-		
 	}
 	
 	@Override

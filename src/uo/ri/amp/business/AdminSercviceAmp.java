@@ -42,7 +42,16 @@ public interface AdminSercviceAmp {
 	 * @throws BusinessException
 	 */
 	public void modificarCurso(long id_curso, String nombre, String descripcion, double totalHoras) throws SQLException, BusinessException;
-	
+
+	/**
+	 * Este metodo modificara el fragmento que sea correspondiente al id_curso y id_tipo
+	 * @param id_curso
+	 * @param id_tipo
+	 * @param porcentaje
+	 * @throws BusinessException
+     */
+	public void modificarFragmento(long id_curso,long id_tipo, int porcentaje) throws BusinessException;
+
 	/**
 	 * Eliminara el curso correspondiente al id dado
 	 * @param id_curso

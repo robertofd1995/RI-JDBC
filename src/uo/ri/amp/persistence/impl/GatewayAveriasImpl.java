@@ -30,56 +30,42 @@ public class GatewayAveriasImpl implements GatewayAverias {
 	private final String SQL_LISTA_POR_ID_VEHICULO_AVERIA=Conf.get("SQL_LISTA_POR_ID_VEHICULO_AVERIA"); 
 	
 	private final String SQL_COMPROBAR_EXISTENCIA_AVERIA=Conf.get("SQL_COMPROBAR_EXISTENCIA_AVERIA"); 
-	private final String SQL_ASIGNAR_AVERIA=Conf.get("SQL_ASIGNAR_AVERIA"); 
-	
-	
+	private final String SQL_ASIGNAR_AVERIA=Conf.get("SQL_ASIGNAR_AVERIA");
 
 
 	@Override
 	public void save(List<Map<String, Object>> averias) throws BusinessException {
-		
-		if (c==null) {
-			throw new BusinessException("Conexion establecida");
+
+		if (c == null) {
+			throw new BusinessException("Conexion no establecida");
 		}
-		
+
 		try {
-			pst=c.prepareStatement(SQL_INSERT_AVERIA);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		for (Map<String, Object> averia : averias) {
-			try {
-				java.util.Date date=(java.util.Date)averia.get("fecha");
-				
-				pst.setString(1, (String)averia.get("descripcion"));
+			pst = c.prepareStatement(SQL_INSERT_AVERIA);
+
+
+			for (Map<String, Object> averia : averias) {
+
+				java.util.Date date = (java.util.Date) averia.get("fecha");
+
+				pst.setString(1, (String) averia.get("descripcion"));
 				pst.setDate(2, new Date(date.getTime()));
-				pst.setDouble(3, (Double)averia.get("importe"));
+				pst.setDouble(3, (Double) averia.get("importe"));
 				pst.setString(4, (String) averia.get("status"));
 				pst.setLong(5, (Long) averia.get("vehiculo_id"));
-				
+
 				pst.execute();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-			
-			
+
+		} catch (SQLException e) {
+			throw new BusinessException("Se ha producido un error al intentar guardar la averia");
 		}
-		
 	}
 
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listar() {
-		
-		/*try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}*/
-		
+	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
+
 		ArrayList<HashMap<String, Object>> averias=new ArrayList<HashMap<String, Object>>();
 		
 		try {
@@ -102,24 +88,19 @@ public class GatewayAveriasImpl implements GatewayAverias {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error al intentar listar las averias");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
-		
-		
+
 		return averias;		
 		
 	}
 
 
 	@Override
-	public void update(long id, String descripcion, Date fecha, double importe) {
-		/*try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}*/
-		
+	public void update(long id, String descripcion, Date fecha, double importe) throws BusinessException {
+
 		try {
 			pst=c.prepareStatement(SQL_UPDATE_AVERIA);
 			
@@ -130,62 +111,48 @@ public class GatewayAveriasImpl implements GatewayAverias {
 			
 			pst.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error al intentar actualizar la averia");
 		}
 		
 	}
 
+	@Override
+	public boolean esAbierta(long id) throws BusinessException {
+		try {
+			pst=c.prepareStatement(SQL_ES_ABIERTA_AVERIA);
+			pst.setLong(1, id);
+
+			rs=pst.executeQuery();
+			rs.next();
+			return (rs.getInt(1)==1)? false : true;
+
+		} catch (SQLException e) {
+			throw new BusinessException("Se ha producido un error mientras se comprobaba el estado de la averia");
+		}finally {
+			Jdbc.close(rs,pst);
+		}
+	}
 
 	@Override
 	public void delete(long id) throws BusinessException {
-		boolean isFacturada;
-		
-		/*try {
-			c = Jdbc.getConnection();
-			c.setAutoCommit(false);
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}*/
-		
 		try {
-			pst=c.prepareStatement(SQL_ES_ABIERTA_AVERIA);
-			
+			pst=c.prepareStatement(SQL_DELETE_AVERIA);
 			pst.setLong(1, id);
-		
-			rs=pst.executeQuery();
-			rs.next();
-			isFacturada=(rs.getInt(1)==1)? false : true;
-			
-			if(isFacturada){
-				
-				throw new BusinessException("El estado de esta averia no es abierta , no se puede eliminar");
-				
-			}else{
-				pst=c.prepareStatement(SQL_DELETE_AVERIA);
-				pst.setLong(1, id);
-				pst.execute();
-			}
-			c.commit();
-			
+			pst.execute();
+
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error al intentar borrar la averia");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
-		
 	}
 
 
 	@Override
-	public ArrayList<HashMap<String, Object>> obtenerAveriaPorIdVehiculo(long id_vehiculo) {
+	public ArrayList<HashMap<String, Object>> obtenerAveriaPorIdVehiculo(long id_vehiculo) throws BusinessException {
 		ArrayList<HashMap<String, Object>> averias=new ArrayList<HashMap<String, Object>>(); 
 		
-		/*try {
-			c = Jdbc.getConnection();
-		} catch (SQLException e1) {
-			Console.print("No ha sido posible establecer conexion con el servidor");
-		}*/
-		
+
 		try {
 			pst=c.prepareStatement(SQL_LISTA_POR_ID_VEHICULO_AVERIA);
 			
@@ -208,12 +175,11 @@ public class GatewayAveriasImpl implements GatewayAverias {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error al intentar obtener la averia del vehiculo ");
+		}finally {
+			Jdbc.close(rs,pst);
 		}
-		
 		return averias;
-		
 	}
 
 
@@ -221,7 +187,6 @@ public class GatewayAveriasImpl implements GatewayAverias {
 	public void setConnection(Connection conection) throws BusinessException {
 		c=Jdbc.getConnection();
 	}
-
 
 	@Override
 	public boolean comprobarAveria(long idAveria) throws BusinessException {
@@ -239,7 +204,6 @@ public class GatewayAveriasImpl implements GatewayAverias {
 		}finally {
 			Jdbc.close(rs,pst);
 		}
-		
 		return existe;
 	}
 
@@ -255,13 +219,11 @@ public class GatewayAveriasImpl implements GatewayAverias {
 			
 			if (rs.getInt(1)!=1) {
 				throw new BusinessException("La averia que esta intentando asignar esta terminada o ya esta asignada");
-				
 			}
 		} catch (SQLException e1) {
 			throw new BusinessException("error al comprobar el estado de la averia");
 		
 		}
-		
 		
 		try {
 			pst=c.prepareStatement(SQL_ASIGNAR_AVERIA);
@@ -275,8 +237,7 @@ public class GatewayAveriasImpl implements GatewayAverias {
 		finally {
 			Jdbc.close(rs, pst);
 		}
-		
-		
+
 	}
 
 }

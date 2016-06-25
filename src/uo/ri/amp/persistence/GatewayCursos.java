@@ -11,7 +11,7 @@ public interface GatewayCursos {
 
     void setConnection(Connection conection);
 	void save(ArrayList<HashMap<String, Object>> cursos) throws BusinessException;
-	ArrayList<HashMap<String, Object>> listar();
+	ArrayList<HashMap<String, Object>> listar() throws BusinessException;
 	ArrayList<HashMap<String, Object>> listarConFragmentos();
 	void modificar(long id_curso, String nombre, String descripcion, double totalHoras) throws BusinessException;
 	void delete(long id_curso) throws BusinessException;

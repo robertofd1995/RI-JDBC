@@ -42,6 +42,7 @@ public class DeleteCurso {
 
 			gatewayFragmentos.borrarFragmentosAsociadosACurso(id_curso);
 			gatewayCursos.delete(id_curso);
+			c.commit();
 		}
 		 finally {
 			Jdbc.close(c);

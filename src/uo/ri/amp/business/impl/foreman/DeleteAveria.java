@@ -24,6 +24,10 @@ public class DeleteAveria {
 		Connection c = Jdbc.getConnection();
 		try {
 			gateway.setConnection(c);
+
+			if(gateway.esAbierta(this.id)){
+				throw new BusinessException("El estado de esta averia no es abierta , no se puede eliminar");
+			}
 			gateway.delete(this.id);
 		} finally {
 			Jdbc.close(c);

@@ -25,8 +25,6 @@ public class GatewayTipoVehiculoImpl implements GatewayTipoVehiculo{
 
 	@Override
 	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
-		
-
 		c = Jdbc.getConnection();
 
 		ArrayList<HashMap<String, Object>> tipos=new ArrayList<HashMap<String, Object>>();

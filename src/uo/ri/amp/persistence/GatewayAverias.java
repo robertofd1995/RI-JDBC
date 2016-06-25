@@ -15,13 +15,15 @@ public interface GatewayAverias {
 
 	public void save(List<Map<String, Object>> averias) throws BusinessException;
 
-	public ArrayList<HashMap<String, Object>> listar();
+	public ArrayList<HashMap<String, Object>> listar() throws BusinessException;
 
-	public void update(long id, String nombre, Date fecha, double importe);
+	public void update(long id, String nombre, Date fecha, double importe) throws BusinessException;
+
+	boolean esAbierta(long id) throws BusinessException;
 
 	public void delete(long id) throws BusinessException;
 
-	public ArrayList<HashMap<String, Object>> obtenerAveriaPorIdVehiculo(long id);
+	public ArrayList<HashMap<String, Object>> obtenerAveriaPorIdVehiculo(long id) throws BusinessException;
 
 	public boolean comprobarAveria(long idAveria) throws BusinessException;
 

@@ -38,7 +38,6 @@ public class GatewayCertificadosImpl implements GatewayCertificados{
 		}		finally {
 			Jdbc.close(pst);
 		}
-		
 	}
 
 	@Override

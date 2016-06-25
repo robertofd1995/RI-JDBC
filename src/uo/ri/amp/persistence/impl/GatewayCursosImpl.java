@@ -29,9 +29,6 @@ public class GatewayCursosImpl implements GatewayCursos{
 	private final String SQL_EXISTE_CURSO=Conf.get("SQL_EXISTE_CURSO");
 	private final String SQL_DELETE_CURSO=Conf.get("SQL_DELETE_CURSO");
 	private final String SQL_LISTAR_ID_CURSOS=Conf.get("SQL_LISTAR_ID_CURSOS");
-	
-	/*private final String SQL_LISTAR_FRAGMENTOS="SELECT HORAS,TIPO_ID,CURSO_ID FROM TFRAGMENTOS"; 
-	private final String SQL_INSERT_FRAGMENTO="insert into TFRAGMENTOS(HORAS,TIPO_ID,CURSO_ID) values (?,?,?)";*/
 
 	@Override
 	public void save(ArrayList<HashMap<String, Object>> cursos) throws BusinessException {
@@ -43,6 +40,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 		}
 		
 		try {
+			//Esto es para asignar el nuevo id del curso y evitar asi asignar uno ya usado
 			c.setAutoCommit(false);
 			pst=c.prepareStatement(SQL_SELECT_ID_CURSO);
 			rs=pst.executeQuery();
@@ -62,26 +60,14 @@ public class GatewayCursosImpl implements GatewayCursos{
 				pst.setDouble(4, totalHoras);
 				
 				pst.executeUpdate();
-				
-				//c.commit();
-				
+
 				@SuppressWarnings("unchecked")
 				ArrayList<HashMap<String, Object>> fragmentos=(ArrayList<HashMap<String, Object>>) curso.get("fragmentos");
 				
 				GatewayFragmentos gatewayFragmentos=APersistenceFactory.getFragmentosGateway();
 				gatewayFragmentos.setConnection(c);
 				gatewayFragmentos.save(fragmentos, id_curso);
-				
-				/*for (HashMap<String, Object> fragmento : fragmentos) {
-					
-					pst=c.prepareStatement(SQL_INSERT_FRAGMENTO);
-					pst.setDouble(1, (Double) fragmento.get("porcentaje"));
-					pst.setLong(2, (Long)fragmento.get("id_tipo"));  //comprobar primero que el id_tipo es valido , �pedir nombre o listar los id_tipo?
-					pst.setLong(3, id_curso);
-					
-					pst.executeUpdate();
-					//c.commit();
-				}*/
+
 				c.commit();
 				id_curso++;
 			}
@@ -90,8 +76,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 			c.setAutoCommit(true);	
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusinessException("Se ha producido un error al intentar añadir un nuevo curso ");
 		}finally {
 			Jdbc.close(rs,pst);
 		}
@@ -116,12 +101,10 @@ public class GatewayCursosImpl implements GatewayCursos{
 		}finally {
 			Jdbc.close(pst);
 		}
-		
-		
 	}
 
 	@Override
-	public ArrayList<HashMap<String, Object>> listar() {
+	public ArrayList<HashMap<String, Object>> listar() throws BusinessException {
 		
 		ArrayList<HashMap<String, Object>> cursos=new ArrayList<HashMap<String, Object>>();
 		
@@ -142,7 +125,7 @@ public class GatewayCursosImpl implements GatewayCursos{
 			}
 			
 		} catch (SQLException e) {
-			Console.println("Error al ejecutar operacion (listar tipos vehiculos))");
+			throw new BusinessException("Error al ejecutar operacion (listar tipos vehiculos))");
 		}finally {
 			Jdbc.close(rs,pst);
 		}
@@ -200,8 +183,6 @@ public class GatewayCursosImpl implements GatewayCursos{
 		finally{
 			Jdbc.close(pst);
 		}
-		
-		
 	}
 
 	
@@ -224,7 +205,6 @@ public class GatewayCursosImpl implements GatewayCursos{
 		}finally {
 			Jdbc.close(rs,pst);
 		}
-		
 		return existe;
 	}
 	
@@ -254,11 +234,8 @@ public class GatewayCursosImpl implements GatewayCursos{
 		}finally {
 			Jdbc.close(rs,pst);
 		}
-		
-		
 		return cursos;
 	}
-	
 
 	@Override
 	public void setConnection(Connection conection) {

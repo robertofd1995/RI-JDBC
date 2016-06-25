@@ -42,28 +42,22 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 	
 	@Override
 	public void save(List<Map<String, String>> mecanicos) throws BusinessException {
-		
-
 		c = Jdbc.getConnection();
 
 		try {
 			pst=c.prepareStatement(SQL_INSERT_MECANICO);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-		for (Map<String, String> mecanico : mecanicos) {
-			try {
-				pst.setString(1, mecanico.get("nombre"));
-				pst.setString(2, mecanico.get("apellidos"));
-				pst.executeUpdate();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}finally {
-				Jdbc.close(pst);
+			for (Map<String, String> mecanico : mecanicos) {
+
+					pst.setString(1, mecanico.get("nombre"));
+					pst.setString(2, mecanico.get("apellidos"));
+					pst.executeUpdate();
 			}
+
+		} catch (SQLException e) {
+			throw new BusinessException("Se ha producido un error al guardar a un mecanico");
+		}finally {
+			Jdbc.close(pst);
 		}
 		
 	}
@@ -83,7 +77,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 			pst.executeUpdate();
 			
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			throw new BusinessException("Se ha producido un error al eliminar a un mecanico");
 		}
 		finally {
 			Jdbc.close(rs, pst);
@@ -116,7 +110,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 				result.add(hash);
 			}
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			throw new BusinessException("Se ha producido un error al listar a los mecanicos");
 		}
 		finally {
 			Jdbc.close(rs, pst);
@@ -230,8 +224,7 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 		ArrayList<HashMap<String, Object>> tipos;
 		
 		GatewayTipoVehiculo gatewayTipos = APersistenceFactory.getTipoVehiculoGateway();
-		
-		
+
 		try {
 			c.setAutoCommit(false);
 			
@@ -258,20 +251,15 @@ public class GatewayMecanicoImpl implements GatewayMecanico {
 					formacion.put("horas", horas);
 					
 					formaciones.add(formacion);
-					
 				}
-				
 				tipo.put("formaciones",formaciones);
-				
 			}
-			
-			
+			c.commit();
 		} catch (SQLException e) {
 			throw new BusinessException("Error durante el listado");
 		}finally {
 			Jdbc.close(rs,pst);
 		}
-		
 		return tipos;
 	}
 }
