@@ -8,8 +8,12 @@ import java.util.Objects;
 import uo.ri.common.BusinessException;
 
 public interface GatewayFragmentos {
-	
-	
+
+
+	/**
+	 * Dada una conexion , esta se establece para utilizarla en todas las operaciones
+	 * @param conection
+	 */
 	public void setConnection(Connection conection);
 	public void save(ArrayList<HashMap<String, Object>> fragmentos,long id_curso) throws BusinessException;
 	public ArrayList<HashMap<String, Object>> listar_fragmentos() throws BusinessException;

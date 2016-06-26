@@ -1,13 +1,444 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="369a7e78-c614-42de-a78f-fbd7fda7f848" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test.lck" afterPath="$PROJECT_DIR$/data/test.lck" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test.properties" afterPath="$PROJECT_DIR$/data/test.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test.script" afterPath="$PROJECT_DIR$/data/test.script" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/Console.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/Printer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/class-use/Console.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/class-use/Printer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/console/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/DateUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/class-use/DateUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/date/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/Jdbc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/class-use/Jdbc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/jdbc/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/Log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/LogLevel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/Logger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/BaseLogger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/ConsoleLogger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/class-use/BaseLogger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/class-use/ConsoleLogger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/adapter/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/class-use/Log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/class-use/LogLevel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/class-use/Logger.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/log/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/Round.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/class-use/Round.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/math/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/Action.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/BaseMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/NotYetImplementedAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/class-use/Action.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/class-use/BaseMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/class-use/NotYetImplementedAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/menu/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/Money.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/class-use/Money.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/money/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/ReflectionUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/class-use/ReflectionUtil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/alb/util/reflection/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-14.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-15.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-16.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-17.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-18.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-19.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-20.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-21.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-22.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/package-list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/serialized-form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/stylesheet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/AdminSercviceAmp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/ForemanServiceAmp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/class-use/AdminSercviceAmp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/class-use/ForemanServiceAmp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/AdminServiceAmpImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/ForemanServiceAmpImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/ListarMecanicosExpertos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/GenerarCertificados.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/ListarFormacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/ListarFormacionPorTipos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/ListarTiposVehiculos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/EliminarAsistencia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/InsertarAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/ListarAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/ModificarAsistencia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/class-use/EliminarAsistencia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/class-use/InsertarAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/class-use/ListarAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/class-use/ModificarAsistencia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/asistencia/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/class-use/GenerarCertificados.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/class-use/ListarFormacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/class-use/ListarFormacionPorTipos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/class-use/ListarTiposVehiculos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/AddCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/DeleteCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/ListarCursos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/ModificarCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/class-use/AddCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/class-use/DeleteCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/class-use/ListarCursos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/class-use/ModificarCurso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/curso/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/admin/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/class-use/AdminServiceAmpImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/class-use/ForemanServiceAmpImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/class-use/ListarMecanicosExpertos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/AddAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/AsignarAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/ComprobarAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/DeleteAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/HistorialVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/ListarAverias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/UpdateAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/AddAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/AsignarAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/ComprobarAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/DeleteAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/HistorialVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/ListarAverias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/class-use/UpdateAveria.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/foreman/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/impl/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/business/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/APersistenceFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/AServicesFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/Conf.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/class-use/APersistenceFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/class-use/AServicesFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/class-use/Conf.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/conf/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayAverias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayCertificados.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayCursos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayFragmentos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayMecanico.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayTipoVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/GatewayVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayAsistencias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayAverias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayCertificados.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayCursos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayFragmentos.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayMecanico.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayTipoVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/class-use/GatewayVehiculo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayAsistenciasImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayAveriasImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayCertificadosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayCursosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayFragmentosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayMecanicoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayTipoVehiculoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/GatewayVehiculoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayAsistenciasImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayAveriasImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayCertificadosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayCursosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayFragmentosImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayMecanicoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayTipoVehiculoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/class-use/GatewayVehiculoImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/impl/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/persistence/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/AsistenciasMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/CursosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/MecanicosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/GenerarCertificadosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/EliminarAsistenciaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/InsertaAsistenciasAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/ListarAsistenciasCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/ModificarAsistenciaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/class-use/EliminarAsistenciaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/class-use/InsertaAsistenciasAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/class-use/ListarAsistenciasCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/class-use/ModificarAsistenciaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/asistencias/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/class-use/GenerarCertificadosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/AddCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/EliminarCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/ListarCursosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/ListarTiposVehiculosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/ModificarCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/class-use/AddCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/class-use/EliminarCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/class-use/ListarCursosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/class-use/ListarTiposVehiculosAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/class-use/ModificarCursoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/curso/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/AddMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/DeleteMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/ListFormacionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/ListFormacionPorTipoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/ListMechanicsAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/UpdateMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/AddMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/DeleteMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/ListFormacionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/ListFormacionPorTipoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/ListMechanicsAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/class-use/UpdateMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/mecanicos/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/action/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/class-use/AsistenciasMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/class-use/CursosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/class-use/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/class-use/MecanicosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/admin/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/ClientesMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/RecepcionMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/VehiculosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/AsignarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/EliminarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/HistorialVehiculoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/ListarAveriasAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/ModificarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/RegistrarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/AsignarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/EliminarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/HistorialVehiculoAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/ListarAveriasAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/ModificarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/class-use/RegistrarAveriaAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/action/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/class-use/ClientesMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/class-use/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/class-use/RecepcionMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/class-use/VehiculosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/amp/ui/foreman/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/AdminService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/CashService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/class-use/AdminService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/class-use/CashService.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/AdminServiceImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/CashServiceImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/AddMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/DeleteMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/ListMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/UpdateMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/class-use/AddMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/class-use/DeleteMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/class-use/ListMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/class-use/UpdateMechanic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/admin/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/FacturarReparaciones.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/class-use/FacturarReparaciones.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/cash/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/class-use/AdminServiceImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/class-use/CashServiceImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/impl/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/business/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/BusinessException.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/class-use/BusinessException.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/common/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/PersistenceFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/ServicesFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/class-use/PersistenceFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/class-use/ServicesFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/conf/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/CargosGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/FacturasGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/MediosPagoGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/class-use/CargosGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/class-use/FacturasGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/class-use/MediosPagoGateway.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/CargosGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/FacturasGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/MediosPagoGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/class-use/CargosGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/class-use/FacturasGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/class-use/MediosPagoGatewayImpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/impl/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/persistence/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/MecanicosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/RepuestosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/TiposVehiculoMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/AddMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/DeleteMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/ListMechanicsAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/UpdateMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/class-use/AddMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/class-use/DeleteMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/class-use/ListMechanicsAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/class-use/UpdateMechanicAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/action/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/class-use/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/class-use/MecanicosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/class-use/RepuestosMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/class-use/TiposVehiculoMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/admin/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/Factura.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/FacturarReparacionesAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/class-use/Factura.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/class-use/FacturarReparacionesAction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/action/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/class-use/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/cash/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/class-use/MainMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/uo/ri/ui/mechanic/package-use.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAsistencias.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAsistencias.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAverias.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAverias.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCertificados.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCertificados.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayMecanico.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayMecanico.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayTipoVehiculo.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayTipoVehiculo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayVehiculo.java" afterPath="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayVehiculo.java" />
     </list>
     <ignored path="TrabajoRI_SIN_MAPEADOR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +477,18 @@
     <favorites_list name="TrabajoRI_SIN_MAPEADOR" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index-1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/index-files/index-1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8367876">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,15 +508,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/console.sql" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/asistencias/ModificarAsistenciaAction.java" />
-        <option value="dbtable:/4199ff73/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/PUBLIC.PUBLIC.TAVERIAS" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/ui/foreman/RecepcionMenu.java" />
-        <option value="$PROJECT_DIR$/src/alb/util/jdbc/Jdbc.java" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/ListarMecanicosExpertos.java" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/asistencia/ListarAsistencias.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/asistencia/ModificarAsistencia.java" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/AddCurso.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/ListarCursos.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/ModificarCurso.java" />
@@ -84,7 +518,6 @@
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/ListarTiposVehiculos.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/ListarAverias.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/ComprobarAveria.java" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java" />
         <option value="dbtable:/4199ff73/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/PUBLIC.PUBLIC.TCURSOS" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/curso/AddCursoAction.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/asistencias/ListarAsistenciasCursoAction.java" />
@@ -94,9 +527,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/asistencia/InsertarAsistencias.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/DeleteCurso.java" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java" />
         <option value="$PROJECT_DIR$/src/configuration.properties" />
-        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/curso/ModificarFragmento.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/AdminServiceAmpImpl.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/ModificarFragmento.java" />
@@ -117,6 +548,17 @@
         <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayTipoVehiculoImpl.java" />
         <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayVehiculoImpl.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/console.sql" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAsistencias.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayVehiculo.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayTipoVehiculo.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayMecanico.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAverias.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCertificados.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java" />
+        <option value="$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java" />
       </list>
     </option>
   </component>
@@ -124,6 +566,16 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -296,7 +748,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabajoRI_SIN_MAPEADOR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RI_JDBC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabajoRI_SIN_MAPEADOR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RI_JDBC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabajoRI_SIN_MAPEADOR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RI_JDBC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,6 +837,9 @@
     <property name="prop_add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\RI_JDBC\doc" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="uo.ri.amp.ui.admin.action.curso" />
     </key>
@@ -851,15 +1372,15 @@
       <workItem from="1466778727983" duration="21979000" />
       <workItem from="1466868150364" duration="19098000" />
       <workItem from="1466895241052" duration="238000" />
-      <workItem from="1466932124463" duration="1927000" />
+      <workItem from="1466932124463" duration="4673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53766000" />
+    <option name="totallyTimeSpent" value="56512000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -867,13 +1388,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40399384" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32411674" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30559757" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30559757" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -884,9 +1407,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -902,7 +1423,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -911,90 +1432,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayVehiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16625917">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAverias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/conf/AServicesFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5377129">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/curso/ModificarCursoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29683697">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/curso/AddCursoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29339853">
-          <caret line="88" column="81" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251834">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49635038">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251834">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/AsistenciasMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16625917">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/MecanicosMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16625917">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/CursosMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66753924">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/admin/action/curso/ModificarFragmentoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/4199ff73/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/PUBLIC.PUBLIC.TFRAGMENTOS">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1004,34 +1441,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33090025">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/configuration.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/ForemanServiceAmpImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1096,13 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/DeleteCurso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/ListarCursos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1159,20 +1561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/AsignarAveria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/ComprobarAveria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/DeleteAveria.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1208,38 +1596,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayAveriasImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33246073">
-          <caret line="231" column="20" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayAsistenciasImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33246073">
-          <caret line="241" column="17" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayCertificadosImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="19" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayCursosImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="40" selection-start-line="158" selection-start-column="40" selection-end-line="158" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6518#6519#0" expanded="false" />
-            <element signature="e#6542#6543#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1266,16 +1628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayTipoVehiculoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46517414">
@@ -1289,7 +1641,7 @@
         <state vertical-scroll-proportion="0.57211536">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1304,6 +1656,192 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.169903">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/ComprobarAveria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayAveriasImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="71" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/ForemanServiceAmpImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/ui/foreman/action/AsignarAveriaAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16262136">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/foreman/AsignarAveria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7936893">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/impl/admin/curso/DeleteCurso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d65dad9e-ad74-4799-8629-9ebc6b2d0e1c/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayAsistenciasImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33496332">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayVehiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.578534">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayTipoVehiculoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251834">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayTipoVehiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29095355">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayMecanico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5366492">
+          <caret line="63" column="75" selection-start-line="63" selection-start-column="75" selection-end-line="63" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAsistencias.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12713936">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayFragmentos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayAverias.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.601467">
+          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCertificados.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37696335">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configuration.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251834">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/impl/GatewayCursosImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251834">
+          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/persistence/GatewayCursos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55497384">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/AdminSercviceAmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.3942556">
+          <caret line="99" column="39" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uo/ri/amp/business/ForemanServiceAmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4126214">
+          <caret line="52" column="61" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/index-files/index-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8367876">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

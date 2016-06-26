@@ -91,13 +91,13 @@ public interface AdminSercviceAmp {
 	/** LISTADO 1
 	 * Listara la formacion de la que dispone el mecanico dado por el id
 	 * @param mecanico_id
-	 * @return  HashMap<String, Object> 
+	 * @return  HashMap(String, Object)
 	 */
 	public HashMap<String, Object> listarFormacion(long mecanico_id) throws BusinessException;
 	
 	/** LISTADO 2
 	 * Lstara por tipos , las horas que cada mecanico ha trabajado en ese vehiculo
-	 * @return  HashMap<String, Object>
+	 * @return  HashMap(String, Object)
 	 */
 	public ArrayList<HashMap<String, Object>> listarFormacionPorTipos() throws BusinessException;
 
