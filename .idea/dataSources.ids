@@ -40,11 +40,10 @@
       <foreign-key name="FKD36C6DAB740C0EFE" columns="MEDIOPAGO_ID" ref-table="TMEDIOSPAGO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
     </table>
     <table name="TCERTIFICADOS" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
-      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="TIPO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="MECANICO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="TIPO_ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5"/>
       <column name="FECHA" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
-      <foreign-key name="CERTIFICADO_MECANICO_FK" columns="MECANICO_ID" ref-table="TMECANICOS" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
-      <foreign-key name="CERTIFICADO_TIPO_FK" columns="TIPO_ID" ref-table="TTIPOSVEHICULO" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3"/>
+      <primary-key name="TCERTIFICADOS_MECANICO_ID_TIPO_ID_PK" columns="MECANICO_ID,TIPO_ID"/>
     </table>
     <table name="TCLIENTES" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="BIGINT" precision="64" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
